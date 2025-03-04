@@ -27,6 +27,46 @@ This repository contains a collection of high-quality, custom-designed themes bu
 - **Dark mode compatibility** – Some themes support dark mode for a modern UI experience.
 - **Easy customization** – Modify colors, typography, and layouts with simple CSS changes.
 
+## Data Structure
+
+The repository follows a well-structured format to keep themes modular and organized:
+
+```
+bootstrap-5-3-themes/
+│── bauhaus/
+│   ├── index.html
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   ├── js/
+│   │   │   ├── script.js
+│   │   ├── img/
+│── carbon-design/
+│── corporate-cybernetic/
+│── cyberpunk/
+│── digital-baroque/
+│── gravity-glass-ui/
+│── neo-brutalism/
+│── neo-neon-brutalism/
+│── neodeco/
+│── pixelcore/
+│── pure-bauhaus/
+│── steampunk/
+│── total-neo-brutalism/
+│── ultra-minimalist-alien/
+│── README.md
+│── LICENSE
+```
+
+### Folder Structure Breakdown:
+
+- **Each theme** is stored in its own folder with an `index.html` file.
+- The `assets/` folder inside each theme contains:
+  - `css/` → Theme-specific styles.
+  - `js/` → JavaScript files for interactivity.
+  - `img/` → Theme-related images and assets.
+- The root directory contains `README.md` and `LICENSE` for documentation and licensing information.
+
 ## Installation & Setup
 
 ### Clone the Repository
