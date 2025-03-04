@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Cybernetic - Bootstrap 5.3 Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body { padding-top: 70px; } /* Adjust for navbar height */
+        section { padding: 40px 0; }
+        .section-title { margin-bottom: 30px; }
+        .component-example { margin-bottom: 20px; padding: 20px; border-radius: 0.25rem; background-color: #1E1E1E; border: 1px solid rgba(176, 190, 197, 0.1); }
+        .component-example > h4 { margin-top: 0; margin-bottom: 15px; color: var(--corporate-cybernetic-neon-accent-2); }
+        .icon-example { font-size: 1.5rem; margin-right: 5px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand neon-text" href="#">
+                <i class="bi bi-cpu icon-example"></i> CyberCorp UI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill icon-example"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-bar-chart-line-fill icon-example"></i> Data Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-gear-fill icon-example"></i> Settings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle icon-example"></i> Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill icon-example"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-envelope-fill icon-example"></i> Messages</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right icon-example"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center bg-gradient-cybernetic py-5">
+            <div class="card bg-corporate-cybernetic-bg shadow-lg">
+                <div class="card-body">
+                    <h1 class="neon-text card-title">Welcome to Cybernetic UI</h1>
+                    <p class="card-text text-light">Experience the future of web interfaces. <br> Dark, sophisticated, and powered by data.</p>
+                    <button class="btn btn-neon-primary btn-lg text-light"><i class="bi bi-rocket-takeoff-fill icon-example"></i> Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography">
+            <h2 class="section-title neon-text"><i class="bi bi-fonts icon-example"></i> Typography</h2>
+            <div class="component-example">
+                <h4>Headings</h4>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+            <div class="component-example">
+                <h4>Body Text</h4>
+                <p>This is a paragraph of body text using the default font. It's designed to be clean, readable, and efficient.  Notice the subtle contrast and the ultra-thin weight for a modern feel.</p>
+                <p><small>This is small text, useful for captions or less important information.</small></p>
+                <p class="text-secondary">This is secondary text, in a lighter shade of grey.</p>
+                <p class="text-light">This is light text, almost white, for strong emphasis.</p>
+            </div>
+            <div class="component-example">
+                <h4>Neon Text</h4>
+                <h2 class="neon-text">Neon Highlight Text</h2>
+                <p>Use the <code>.neon-text</code> class to highlight important headings or titles with a vibrant, futuristic glow.</p>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons">
+            <h2 class="section-title neon-text"><i class="bi bi-ui-radios-vertical icon-example"></i> Buttons</h2>
+            <div class="component-example">
+                <h4>Primary Buttons</h4>
+                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill icon-example"></i> Primary</button>
+                <button type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-right-circle icon-example"></i> Outline Primary</button>
+                <button type="button" class="btn btn-neon-primary text-light"><i class="bi bi-lightning-fill icon-example"></i> Neon Primary</button>
+            </div>
+            <div class="component-example">
+                <h4>Secondary Buttons</h4>
+                <button type="button" class="btn btn-secondary"><i class="bi bi-gear-fill icon-example"></i> Secondary</button>
+                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-dash-circle icon-example"></i> Outline Secondary</button>
+            </div>
+            <div class="component-example">
+                <h4>Success Buttons</h4>
+                <button type="button" class="btn btn-success"><i class="bi bi-check-lg icon-example"></i> Success</button>
+                <button type="button" class="btn btn-outline-success"><i class="bi bi-check2-square icon-example"></i> Outline Success</button>
+            </div>
+            <div class="component-example">
+                <h4>Info Buttons</h4>
+                <button type="button" class="btn btn-info"><i class="bi bi-info-circle-fill icon-example"></i> Info</button>
+                <button type="button" class="btn btn-outline-info"><i class="bi bi-question-circle icon-example"></i> Outline Info</button>
+            </div>
+            <div class="component-example">
+                <h4>Warning Buttons</h4>
+                <button type="button" class="btn btn-warning"><i class="bi bi-exclamation-triangle-fill icon-example"></i> Warning</button>
+                <button type="button" class="btn btn-outline-warning"><i class="bi bi-exclamation-circle icon-example"></i> Outline Warning</button>
+            </div>
+            <div class="component-example">
+                <h4>Danger Buttons</h4>
+                <button type="button" class="btn btn-danger"><i class="bi bi-x-circle-fill icon-example"></i> Danger</button>
+                <button type="button" class="btn btn-outline-danger"><i class="bi bi-x-octagon icon-example"></i> Outline Danger</button>
+            </div>
+            <div class="component-example">
+                <h4>Light & Dark Buttons</h4>
+                <button type="button" class="btn btn-light"><i class="bi bi-sun-fill icon-example"></i> Light</button>
+                <button type="button" class="btn btn-outline-light"><i class="bi bi-circle-half icon-example"></i> Outline Light</button>
+                <button type="button" class="btn btn-dark"><i class="bi bi-moon-fill icon-example"></i> Dark</button>
+                <button type="button" class="btn btn-outline-dark"><i class="bi bi-circle icon-example"></i> Outline Dark</button>
+            </div>
+            <div class="component-example">
+                <h4>Button Sizes & States</h4>
+                <button type="button" class="btn btn-primary btn-lg"><i class="bi bi-arrows-fullscreen icon-example"></i> Large button</button>
+                <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-arrows-collapse icon-example"></i> Small button</button>
+                <button type="button" class="btn btn-primary" disabled><i class="bi bi-slash-circle icon-example"></i> Disabled button</button>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <h2 class="section-title neon-text"><i class="bi bi-journal-richtext icon-example"></i> Forms</h2>
+            <div class="component-example">
+                <h4>Form Inputs</h4>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload File</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </div>
+            <div class="component-example">
+                <h4>Select Menus</h4>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+            <div class="component-example">
+                <h4>Checkboxes and Radios</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Default radio
+                    </label>
+                </div>
+            </div>
+            <div class="component-example">
+                <h4>Range Input</h4>
+                <label for="customRange1" class="form-label">Volume</label>
+                <input type="range" class="form-range" id="customRange1">
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards">
+            <h2 class="section-title neon-text"><i class="bi bi-card-list icon-example"></i> Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="holder.js/100x180" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary"><i class="bi bi-link-45deg icon-example"></i> Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-corporate-cybernetic-bg text-light">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-outline-light"><i class="bi bi-star-fill icon-example"></i> Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-ligth">
+                            2 days ago
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some more example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link"><i class="bi bi-link-fill icon-example"></i> Card link</a>
+                            <a href="#" class="card-link"><i class="bi bi-link-fill icon-example"></i> Another link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables">
+            <h2 class="section-title neon-text"><i class="bi bi-table icon-example"></i> Tables</h2>
+            <div class="component-example">
+                <h4>Dark Table</h4>
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Header</th>
+                            <th scope="col">Header</th>
+                            <th scope="col">Header</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Modals Section -->
+        <section id="modals">
+            <h2 class="section-title neon-text"><i class="bi bi-window-dock icon-example"></i> Modals</h2>
+            <div class="component-example">
+                <h4>Modal Example</h4>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-window-plus icon-example"></i> Launch demo modal</button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title neon-text" id="exampleModalLabel"><i class="bi bi-exclamation-diamond-fill icon-example"></i> Modal title</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                This is a basic modal example within the Cybernetic UI theme.  Modals are great for displaying important information or prompting user actions.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-lg icon-example"></i> Close</button>
+                                <button type="button" class="btn btn-primary"><i class="bi bi-check-lg icon-example"></i> Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section id="alerts">
+            <h2 class="section-title neon-text"><i class="bi bi-bell-fill icon-example"></i> Alerts</h2>
+            <div class="component-example">
+                <h4>Alert Examples</h4>
+                <div class="alert alert-primary" role="alert"><i class="bi bi-info-circle-fill icon-example"></i> A simple primary alert—check it out!</div>
+                <div class="alert alert-secondary" role="alert"><i class="bi bi-info-circle-fill icon-example"></i> A simple secondary alert—check it out!</div>
+                <div class="alert alert-success" role="alert"><i class="bi bi-check-circle-fill icon-example"></i> A simple success alert—check it out!</div>
+                <div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-triangle-fill icon-example"></i> A simple danger alert—check it out!</div>
+                <div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-triangle-fill icon-example"></i> A simple warning alert—check it out!</div>
+                <div class="alert alert-info" role="alert"><i class="bi bi-info-circle-fill icon-example"></i> A simple info alert—check it out!</div>
+                <div class="alert alert-light" role="alert"><i class="bi bi-sun-fill icon-example"></i> A simple light alert—check it out!</div>
+                <div class="alert alert-dark" role="alert"><i class="bi bi-moon-fill icon-example"></i> A simple dark alert—check it out!</div>
+            </div>
+        </section>
+
+        <!-- List Groups Section -->
+        <section id="listgroups">
+            <h2 class="section-title neon-text"><i class="bi bi-list-task icon-example"></i> List Groups</h2>
+            <div class="component-example">
+                <h4>List Group Example</h4>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Subheading</div>
+                            Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Subheading</div>
+                            Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Subheading</div>
+                            Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">1</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress">
+            <h2 class="section-title neon-text"><i class="bi bi-graph-up icon-example"></i> Progress Bars</h2>
+            <div class="component-example">
+                <h4>Progress Bar Examples</h4>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spinners Section -->
+        <section id="spinners">
+            <h2 class="section-title neon-text"><i class="bi bi-arrow-repeat icon-example"></i> Spinners</h2>
+            <div class="component-example">
+                <h4>Spinner Examples</h4>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltips & Popovers Section -->
+        <section id="tooltips-popovers">
+            <h2 class="section-title neon-text"><i class="bi bi-chat-dots-fill icon-example"></i> Tooltips & Popovers</h2>
+            <div class="component-example">
+                <h4>Tooltips</h4>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                    Tooltip on right
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                    Tooltip on left
+                </button>
+            </div>
+            <div class="component-example">
+                <h4>Popovers</h4>
+                <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">
+                    Click to toggle popover
+                </button>
+            </div>
+        </section>
+
+        <!-- Pagination Section -->
+        <section id="pagination">
+            <h2 class="section-title neon-text"><i class="bi bi-list-ol icon-example"></i> Pagination</h2>
+            <div class="component-example">
+                <h4>Pagination Example</h4>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-left-short"></i> Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next <i class="bi bi-arrow-right-short"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Breadcrumbs Section -->
+        <section id="breadcrumbs">
+            <h2 class="section-title neon-text"><i class="bi bi-signpost-split-fill icon-example"></i> Breadcrumbs</h2>
+            <div class="component-example">
+                <h4>Breadcrumbs Example</h4>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Accordion Section -->
+        <section id="accordion">
+            <h2 class="section-title neon-text"><i class="bi bi-layout-expanded icon-example"></i> Accordion</h2>
+            <div class="component-example">
+                <h4>Accordion Example</h4>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the second item's accordion body. It is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the third item's accordion body. It is hidden by default.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dropdowns Section -->
+        <section id="dropdowns">
+            <h2 class="section-title neon-text"><i class="bi bi-arrow-down-square-fill icon-example"></i> Dropdowns</h2>
+            <div class="component-example">
+                <h4>Dropdown Example</h4>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-fill icon-example"></i> Action</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square icon-example"></i> Another action</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-trash-fill icon-example"></i> Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right icon-example"></i> Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>© 2023 CyberCorp UI. Powered by Bootstrap 5.3 & Corporate Cybernetic Theme.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.9/holder.min.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+</html>

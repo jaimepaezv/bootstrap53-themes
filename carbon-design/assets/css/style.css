@@ -1,0 +1,1160 @@
+/* IBM Carbon Design System Override for Bootstrap 5.3 - Google Fonts */
+
+/* ------------------------------------------------------------ */
+/*  1. Google Fonts Import - IBM Plex */
+/* ------------------------------------------------------------ */
+/*  Include these lines in your HTML <head> section:
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+*/
+
+
+/* ------------------------------------------------------------ */
+/*  2. Global Styles - Font Family, Body, etc. */
+/* ------------------------------------------------------------ */
+:root {
+    --carbon-font-sans: 'IBM Plex Sans', sans-serif;
+    --carbon-font-mono: 'IBM Plex Mono', monospace;
+
+    /* Carbon Colors -  Adapted for CSS variables, adjust values based on your Carbon theme */
+    --carbon-white: #ffffff;
+    --carbon-gray-10: #f4f4f4;
+    --carbon-gray-20: #e0e0e0;
+    --carbon-gray-30: #c6c6c6;
+    --carbon-gray-40: #acacac;
+    --carbon-gray-50: #919191;
+    --carbon-gray-60: #787878;
+    --carbon-gray-70: #5a5a5a;
+    --carbon-gray-80: #4d4d4d;
+    --carbon-gray-90: #3d3d3d;
+    --carbon-gray-100: #262626;
+    --carbon-blue-50: #0f62fe;
+    /* Primary Blue */
+    --carbon-blue-70: #0043ce;
+    /* Darker Blue */
+    --carbon-red-50: #da1e28;
+    --carbon-green-50: #3d70b2;
+    /* Example green, adjust as needed */
+    --carbon-yellow-50: #fddb3a;
+    /* Example yellow, adjust as needed */
+    --carbon-teal-50: #007d79;
+    /* Example teal, adjust as needed */
+    --carbon-purple-50: #8a3ffc;
+    /* Example purple, adjust as needed */
+    --carbon-orange-50: #fa4d56;
+    /* Example orange, adjust as needed */
+
+    --bs-font-sans-serif: var(--carbon-font-sans);
+    /* Override Bootstrap font stack */
+    --bs-font-monospace: var(--carbon-font-mono);
+
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    /* Carbon default body size */
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: var(--carbon-gray-90);
+    /* Darker text for better contrast */
+    --bs-body-bg: var(--carbon-white);
+    /* White background */
+
+    /* Override primary, secondary, etc. Bootstrap colors with Carbon equivalents */
+    --bs-primary: var(--carbon-blue-50);
+    --bs-secondary: var(--carbon-gray-60);
+    /* Example secondary, adjust */
+    --bs-success: var(--carbon-green-50);
+    /* Example success, adjust */
+    --bs-info: var(--carbon-teal-50);
+    /* Example info, adjust */
+    --bs-warning: var(--carbon-yellow-50);
+    /* Example warning, adjust */
+    --bs-danger: var(--carbon-red-50);
+    --bs-light: var(--carbon-gray-10);
+    --bs-dark: var(--carbon-gray-100);
+
+    /* Text muted color */
+    --bs-text-muted: var(--carbon-gray-70);
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 600;
+    /* Carbon heading weight */
+    line-height: 1.2;
+    /* Tighter heading line height */
+    margin-bottom: 0.5rem;
+    /* Adjust heading spacing */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--carbon-blue-70);
+    /* Darker blue on hover */
+    text-decoration: underline;
+    /* Or no underline, depending on Carbon style */
+}
+
+/* ------------------------------------------------------------ */
+/*  3. Buttons */
+/* ------------------------------------------------------------ */
+.btn {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 600;
+    /* Carbon button weight */
+    border: none;
+    border-radius: 0;
+    /* Carbon buttons are square */
+    padding: 0.5rem 1rem;
+    /* Adjust padding to Carbon button size */
+    line-height: 1.2;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:focus,
+.btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .5);
+    /* Bootstrap default focus ring adapted to primary color */
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--carbon-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--carbon-blue-70);
+    color: var(--carbon-white);
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+    background-color: var(--carbon-blue-70);
+    color: var(--carbon-white);
+    box-shadow: none;
+    /* Remove default active shadow */
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .5);
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    color: var(--carbon-white);
+    /* Or darker text if needed for secondary */
+}
+
+.btn-secondary:hover {
+    background-color: darken(var(--bs-secondary), 10%);
+    /* Example darken, adjust */
+    color: var(--carbon-white);
+}
+
+/* ... Override other button variants (success, danger, warning, info, light, dark) similarly using Carbon colors ... */
+.btn-success {
+    background-color: var(--bs-success);
+    color: var(--carbon-white);
+}
+
+.btn-success:hover {
+    background-color: darken(var(--bs-success), 10%);
+    color: var(--carbon-white);
+}
+
+.btn-danger {
+    background-color: var(--bs-danger);
+    color: var(--carbon-white);
+}
+
+.btn-danger:hover {
+    background-color: darken(var(--bs-danger), 10%);
+    color: var(--carbon-white);
+}
+
+.btn-warning {
+    background-color: var(--bs-warning);
+    color: var(--carbon-gray-90);
+}
+
+/* Darker text for yellow contrast */
+.btn-warning:hover {
+    background-color: darken(var(--bs-warning), 10%);
+    color: var(--carbon-gray-90);
+}
+
+.btn-info {
+    background-color: var(--bs-info);
+    color: var(--carbon-white);
+}
+
+.btn-info:hover {
+    background-color: darken(var(--bs-info), 10%);
+    color: var(--carbon-white);
+}
+
+.btn-light {
+    background-color: var(--bs-light);
+    color: var(--carbon-gray-90);
+    border: 1px solid var(--carbon-gray-30);
+}
+
+/* Add border for light button */
+.btn-light:hover {
+    background-color: darken(var(--bs-light), 5%);
+    color: var(--carbon-gray-90);
+    border: 1px solid var(--carbon-gray-30);
+}
+
+.btn-dark {
+    background-color: var(--bs-dark);
+    color: var(--carbon-white);
+}
+
+.btn-dark:hover {
+    background-color: lighten(var(--bs-dark), 10%);
+    color: var(--carbon-white);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: var(--carbon-white);
+}
+
+/* ... Override other outline button variants similarly ... */
+.btn-outline-secondary {
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bs-secondary);
+    color: var(--carbon-white);
+}
+
+.btn-outline-success {
+    color: var(--bs-success);
+    border-color: var(--bs-success);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--bs-success);
+    color: var(--carbon-white);
+}
+
+.btn-outline-danger {
+    color: var(--bs-danger);
+    border-color: var(--bs-danger);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--bs-danger);
+    color: var(--carbon-white);
+}
+
+.btn-outline-warning {
+    color: var(--bs-warning);
+    border-color: var(--bs-warning);
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--bs-warning);
+    color: var(--carbon-gray-90);
+}
+
+.btn-outline-info {
+    color: var(--bs-info);
+    border-color: var(--bs-info);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--bs-info);
+    color: var(--carbon-white);
+}
+
+.btn-outline-light {
+    color: var(--bs-light);
+    border-color: var(--bs-light);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--bs-light);
+    color: var(--carbon-gray-90);
+}
+
+.btn-outline-dark {
+    color: var(--bs-dark);
+    border-color: var(--bs-dark);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--bs-dark);
+    color: var(--carbon-white);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  4. Forms */
+/* ------------------------------------------------------------ */
+.form-control {
+    font-family: var(--bs-font-sans-serif);
+    border: 1px solid var(--carbon-gray-30);
+    border-radius: 0;
+    /* Square inputs */
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: var(--carbon-gray-90);
+    background-color: var(--carbon-white);
+    box-shadow: none;
+    /* Remove default shadow */
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+    /* Focus shadow */
+    outline: 0;
+}
+
+.form-label {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 600;
+    /* Bold labels */
+    margin-bottom: 0.25rem;
+    color: var(--carbon-gray-90);
+}
+
+.form-check-label {
+    font-family: var(--bs-font-sans-serif);
+    color: var(--carbon-gray-90);
+}
+
+.form-select {
+    font-family: var(--bs-font-sans-serif);
+    border: 1px solid var(--carbon-gray-30);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: var(--carbon-gray-90);
+    background-color: var(--carbon-white);
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+    outline: 0;
+}
+
+.form-range {
+    /* Customize range input if needed to match Carbon */
+}
+
+
+/* ------------------------------------------------------------ */
+/*  5. Navigation Bar */
+/* ------------------------------------------------------------ */
+.navbar {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--carbon-gray-10);
+    /* Light gray navbar background */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--carbon-gray-30);
+    /* Optional bottom border */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    /* Bold brand text */
+    color: var(--carbon-gray-90);
+}
+
+.navbar-brand:hover {
+    color: var(--carbon-gray-100);
+}
+
+.navbar-nav .nav-link {
+    color: var(--carbon-gray-90);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+    background-color: transparent;
+    /* Remove background highlight on hover if desired */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(77,77,77, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Dark gray hamburger icon */
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+    /* Focus ring */
+}
+
+
+/* ------------------------------------------------------------ */
+/*  6. Cards */
+/* ------------------------------------------------------------ */
+.card {
+    font-family: var(--bs-font-sans-serif);
+    border: 1px solid var(--carbon-gray-30);
+    border-radius: 0;
+    box-shadow: none;
+    /* Remove default card shadow for flatter look */
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--carbon-gray-10);
+    border-bottom: 1px solid var(--carbon-gray-30);
+    border-top: none;
+    padding: 0.75rem 1rem;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+    color: var(--bs-text-muted);
+    margin-bottom: 1rem;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  7. Alerts */
+/* ------------------------------------------------------------ */
+.alert {
+    font-family: var(--bs-font-sans-serif);
+    border-radius: 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    /* Reset default border */
+}
+
+.alert-primary {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    /* Light primary background */
+    color: var(--bs-primary);
+    border-color: rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.alert-secondary {
+    background-color: rgba(var(--bs-secondary-rgb), 0.1);
+    color: var(--bs-secondary);
+    border-color: rgba(var(--bs-secondary-rgb), 0.3);
+}
+
+/* ... Override other alert variants similarly ... */
+.alert-success {
+    background-color: rgba(var(--bs-success-rgb), 0.1);
+    color: var(--bs-success);
+    border-color: rgba(var(--bs-success-rgb), 0.3);
+}
+
+.alert-danger {
+    background-color: rgba(var(--bs-danger-rgb), 0.1);
+    color: var(--bs-danger);
+    border-color: rgba(var(--bs-danger-rgb), 0.3);
+}
+
+.alert-warning {
+    background-color: rgba(var(--bs-warning-rgb), 0.1);
+    color: var(--bs-warning);
+    border-color: rgba(var(--bs-warning-rgb), 0.3);
+}
+
+.alert-info {
+    background-color: rgba(var(--bs-info-rgb), 0.1);
+    color: var(--bs-info);
+    border-color: rgba(var(--bs-info-rgb), 0.3);
+}
+
+.alert-light {
+    background-color: rgba(var(--bs-light-rgb), 0.1);
+    color: var(--bs-dark);
+    border-color: rgba(var(--bs-light-rgb), 0.3);
+}
+
+.alert-dark {
+    background-color: rgba(var(--bs-dark-rgb), 0.1);
+    color: var(--bs-dark);
+    border-color: rgba(var(--bs-dark-rgb), 0.3);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  8. List Groups */
+/* ------------------------------------------------------------ */
+.list-group-item {
+    font-family: var(--bs-font-sans-serif);
+    border-color: var(--carbon-gray-30);
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+}
+
+.list-group-item.active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--carbon-white);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  9. Modals */
+/* ------------------------------------------------------------ */
+.modal-content {
+    font-family: var(--bs-font-sans-serif);
+    border-radius: 0;
+    border: 1px solid var(--carbon-gray-40);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    /* Optional modal shadow */
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--carbon-gray-30);
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--carbon-gray-30);
+    padding: 1.5rem;
+}
+
+.modal-header .btn-close {
+    /* Customize close button if needed */
+}
+
+
+/* ------------------------------------------------------------ */
+/*  10. Typography Utilities (Example - adjust as needed) */
+/* ------------------------------------------------------------ */
+.fw-carbon-bold {
+    font-weight: 600 !important;
+}
+
+/* Example bold utility */
+.text-carbon-primary {
+    color: var(--bs-primary) !important;
+}
+
+/* Example text color utility */
+.text-carbon-secondary {
+    color: var(--bs-secondary) !important;
+}
+
+/* ... add more text and font utilities as needed ... */
+
+
+/* ------------------------------------------------------------ */
+/*  11. Spacing Utilities (Example - adjust based on Carbon spacing scale) */
+/* ------------------------------------------------------------ */
+/*  Carbon uses a spacing scale (e.g., 0, 0.25rem, 0.5rem, 1rem, etc.)
+      You can override Bootstrap spacing utilities to align with this scale.
+      Example overrides:
+  */
+.mt-1,
+.my-1 {
+    margin-top: 0.25rem !important;
+}
+
+.mb-1,
+.my-1 {
+    margin-bottom: 0.25rem !important;
+}
+
+.ms-1,
+.mx-1 {
+    margin-left: 0.25rem !important;
+}
+
+.me-1,
+.mx-1 {
+    margin-right: 0.25rem !important;
+}
+
+.pt-1,
+.py-1 {
+    padding-top: 0.25rem !important;
+}
+
+.pb-1,
+.py-1 {
+    padding-bottom: 0.25rem !important;
+}
+
+.ps-1,
+.px-1 {
+    padding-left: 0.25rem !important;
+}
+
+.pe-1,
+.px-1 {
+    padding-right: 0.25rem !important;
+}
+
+.mt-2,
+.my-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mb-2,
+.my-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.ms-2,
+.mx-2 {
+    margin-left: 0.5rem !important;
+}
+
+.me-2,
+.mx-2 {
+    margin-right: 0.5rem !important;
+}
+
+.pt-2,
+.py-2 {
+    padding-top: 0.5rem !important;
+}
+
+.pb-2,
+.py-2 {
+    padding-bottom: 0.5rem !important;
+}
+
+.ps-2,
+.px-2 {
+    padding-left: 0.5rem !important;
+}
+
+.pe-2,
+.px-2 {
+    padding-right: 0.5rem !important;
+}
+
+/* ... continue for other spacing utility classes (mt-3, mt-4, mt-5, etc.) based on Carbon scale ... */
+
+
+/* ------------------------------------------------------------ */
+/*  12. Code and Preformatted Text */
+/* ------------------------------------------------------------ */
+code,
+pre {
+    font-family: var(--bs-font-monospace);
+    font-size: 0.875rem;
+    /* Adjust code font size */
+    background-color: var(--carbon-gray-10);
+    /* Light gray code background */
+    padding: 0.2rem 0.4rem;
+    border-radius: 0;
+    /* Square code blocks */
+}
+
+pre {
+    padding: 0.75rem;
+    overflow-x: auto;
+    /* Horizontal scroll for long code lines */
+}
+
+
+/* ------------------------------------------------------------ */
+/*  13. Tables */
+/* ------------------------------------------------------------ */
+.table {
+    font-family: var(--bs-font-sans-serif);
+    color: var(--bs-body-color);
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--carbon-gray-30);
+    text-align: left;
+    /* Default left alignment */
+}
+
+.table thead th {
+    border-bottom-width: 2px;
+    font-weight: 600;
+    /* Bold table headers */
+    background-color: var(--carbon-gray-10);
+    /* Light gray header background */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(var(--carbon-gray-100), 0.05);
+    /* Light gray striped rows */
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+    /* Light primary hover background */
+}
+
+.table-bordered {
+    border: 1px solid var(--carbon-gray-30);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--carbon-gray-30);
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody+tbody {
+    border: 0;
+}
+
+/* ... Table color variants (primary, secondary, etc.) can be overridden similarly ... */
+
+
+/* ------------------------------------------------------------ */
+/*  14. Accordions */
+/* ------------------------------------------------------------ */
+.accordion-button {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 600;
+    background-color: var(--carbon-white);
+    border: 1px solid var(--carbon-gray-30);
+    border-radius: 0;
+    padding: 1rem 1.25rem;
+    color: var(--carbon-gray-90);
+    box-shadow: none;
+    /* Remove default shadow */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--carbon-white);
+    /* Keep background white when expanded */
+    color: var(--bs-primary);
+    /* Primary color for expanded accordion title */
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+    outline: 0;
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    border: 1px solid var(--carbon-gray-30);
+    border-top: none;
+}
+
+.accordion-item {
+    border: none;
+    /* Remove default item borders for cleaner look */
+    border-bottom: 1px solid var(--carbon-gray-30);
+    /* Add bottom border for item separation */
+    border-radius: 0;
+    margin-bottom: 0;
+    /* Remove default item margin */
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.accordion-flush .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+
+.accordion-flush .accordion-item:first-child {
+    border-top: 0;
+}
+
+.accordion-flush .accordion-item:last-child {
+    border-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  15. Progress Bars */
+/* ------------------------------------------------------------ */
+.progress {
+    border-radius: 0;
+    background-color: var(--carbon-gray-20);
+    /* Light gray progress bar background */
+    overflow: hidden;
+    /* Ensure rounded corners are clipped if you add them later */
+}
+
+.progress-bar {
+    background-color: var(--bs-primary);
+    /* Primary color progress bar */
+}
+
+
+/* ------------------------------------------------------------ */
+/*  16. Tooltips and Popovers */
+/* ------------------------------------------------------------ */
+.tooltip {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 0.875rem;
+}
+
+.tooltip-inner {
+    background-color: var(--carbon-gray-90);
+    color: var(--carbon-white);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: var(--carbon-gray-90);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: var(--carbon-gray-90);
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: var(--carbon-gray-90);
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: var(--carbon-gray-90);
+}
+
+.popover {
+    font-family: var(--bs-font-sans-serif);
+    border: 1px solid var(--carbon-gray-40);
+    border-radius: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.popover-header {
+    font-weight: 600;
+    background-color: var(--carbon-gray-10);
+    border-bottom: 1px solid var(--carbon-gray-30);
+    border-radius: 0 0 0 0;
+    /* Remove header radius */
+    padding: 0.75rem 1rem;
+}
+
+.popover-body {
+    padding: 1rem;
+    color: var(--carbon-gray-90);
+}
+
+.popover-arrow::after,
+.popover-arrow::before {
+    border-color: transparent;
+    /* Reset arrow border colors */
+}
+
+.bs-popover-top>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^="top"]>.popover-arrow::after {
+    border-top-color: var(--carbon-white);
+}
+
+.bs-popover-end>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^="right"]>.popover-arrow::after {
+    border-right-color: var(--carbon-white);
+}
+
+.bs-popover-bottom>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::after {
+    border-bottom-color: var(--carbon-white);
+}
+
+.bs-popover-start>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^="left"]>.popover-arrow::after {
+    border-left-color: var(--carbon-white);
+}
+
+.bs-popover-top>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^="top"]>.popover-arrow::before {
+    border-top-color: var(--carbon-gray-40);
+    /* Arrow border color */
+}
+
+.bs-popover-end>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^="right"]>.popover-arrow::before {
+    border-right-color: var(--carbon-gray-40);
+}
+
+.bs-popover-bottom>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::before {
+    border-bottom-color: var(--carbon-gray-40);
+}
+
+.bs-popover-start>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^="left"]>.popover-arrow::before {
+    border-left-color: var(--carbon-gray-40);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  17. Pagination */
+/* ------------------------------------------------------------ */
+.pagination {
+    font-family: var(--bs-font-sans-serif);
+}
+
+.page-link {
+    background-color: var(--carbon-white);
+    border: 1px solid var(--carbon-gray-30);
+    color: var(--carbon-gray-90);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.page-link:hover {
+    background-color: var(--carbon-gray-10);
+    /* Lighter background on hover */
+    color: var(--carbon-gray-100);
+    border-color: var(--carbon-gray-30);
+}
+
+.page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+    outline: 0;
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--carbon-white);
+}
+
+.page-item.disabled .page-link {
+    background-color: var(--carbon-gray-10);
+    border-color: var(--carbon-gray-30);
+    color: var(--bs-text-muted);
+}
+
+.pagination-lg .page-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+}
+
+.pagination-sm .page-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  18. Breadcrumbs */
+/* ------------------------------------------------------------ */
+.breadcrumb {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--carbon-gray-10);
+    /* Light gray breadcrumb background */
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--carbon-gray-70);
+    /* Separator color */
+    content: "/"
+        /* Carbon separator */
+}
+
+.breadcrumb-item a {
+    color: var(--bs-primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--bs-text-muted);
+}
+
+
+/* ------------------------------------------------------------ */
+/*  19. Close Button */
+/* ------------------------------------------------------------ */
+.btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234d4d4d'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    /* Dark gray close icon */
+}
+
+.btn-close:hover {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23787878'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    /* Slightly lighter gray on hover */
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25);
+}
+
+.btn-close.disabled,
+.btn-close:disabled {
+    opacity: 0.5;
+}
+
+/* ------------------------------------------------------------ */
+/*  20. Offcanvas */
+/* ------------------------------------------------------------ */
+.offcanvas {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--carbon-white);
+    /* White offcanvas background */
+    border-right: 1px solid var(--carbon-gray-30);
+    /* Right border for offcanvas */
+    box-shadow: -0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+    /* Optional shadow */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid var(--carbon-gray-30);
+    padding: 1.5rem;
+}
+
+.offcanvas-title {
+    font-weight: 600;
+}
+
+.offcanvas-body {
+    padding: 1.5rem;
+}
+
+/* ------------------------------------------------------------ */
+/*  21. List Unstyled and Inline Lists */
+/* ------------------------------------------------------------ */
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline-item {
+    display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+
+/* ------------------------------------------------------------ */
+/*  22. Utilities - Borders (Example - adjust as needed) */
+/* ------------------------------------------------------------ */
+.border-carbon-gray-30 {
+    border-color: var(--carbon-gray-30) !important;
+}
+
+.border-top-carbon-gray-30 {
+    border-top-color: var(--carbon-gray-30) !important;
+}
+
+.border-end-carbon-gray-30 {
+    border-right-color: var(--carbon-gray-30) !important;
+}
+
+.border-bottom-carbon-gray-30 {
+    border-bottom-color: var(--carbon-gray-30) !important;
+}
+
+.border-start-carbon-gray-30 {
+    border-left-color: var(--carbon-gray-30) !important;
+}
+
+/* Add more border utilities for other Carbon gray shades if needed */
+
+
+/* ------------------------------------------------------------ */
+/*  IMPORTANT NOTES: */
+/* ------------------------------------------------------------ */
+/*
+  1. **Google Fonts:** Make sure to include the Google Fonts `<link>` tags in your HTML `<head>` as mentioned at the beginning.
+  2. **Carbon Color Palette:** The `--carbon-*` color variables are examples.  You'll need to adjust these values to precisely match the specific IBM Carbon theme (light, dark, etc.) you are aiming for. Refer to the official IBM Carbon Design System documentation for accurate color codes.
+  3. **Specificity:**  This CSS uses fairly high specificity to override Bootstrap defaults. In some cases, you might need to increase specificity further (e.g., using IDs or more chained selectors) if certain Bootstrap styles are still persisting.
+  4. **Component Variations:** Bootstrap and Carbon have various component variations (e.g., different button sizes, card layouts, etc.). This CSS provides a base override, but you might need to add more specific styles for those variations depending on your usage.
+  5. **JavaScript Components:**  This CSS primarily addresses visual styles. Some Bootstrap components rely on JavaScript for functionality (e.g., dropdowns, carousels).  This CSS won't change the JavaScript behavior, only the appearance.
+  6. **Carbon Icons:**  IBM Carbon Design System uses its own icon set. To fully replicate Carbon, you would need to replace Bootstrap icons with Carbon icons. This usually involves including the Carbon icon library and updating your HTML to use Carbon icon classes.  This CSS does not include icon replacement.
+  7. **Accessibility:**  While Carbon Design System is designed with accessibility in mind, always test your implementation with accessibility tools to ensure compliance.
+  8. **Customization:** This is a starting point. You'll likely need to further customize this CSS based on your specific project requirements and the level of Carbon Design System fidelity you want to achieve.
+  9. **Testing:** Thoroughly test your Bootstrap implementation after applying this CSS to ensure all components are styled correctly and consistently.
+  
+  This comprehensive CSS provides a strong foundation for overriding Bootstrap 5.3 to resemble the IBM Carbon Design System using Google Fonts. Remember to adjust the color variables and potentially add more specific rules for a truly complete and accurate Carbon implementation.
+  */

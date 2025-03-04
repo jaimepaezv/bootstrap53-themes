@@ -1,0 +1,660 @@
+/* --- GOOGLE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/* --- ROOT VARIABLES (CUSTOMIZABLE PALETTE) --- */
+:root {
+    --bs-body-bg: #121212;
+    /* Background Dark */
+    --bs-body-color: #EEEEEE;
+    /* Text Light */
+    --bs-font-sans-serif: 'Rajdhani', sans-serif;
+    --bs-font-monospace: 'Roboto Mono', monospace;
+
+    --neon-primary: #00FFFF;
+    /* Cyan Neon */
+    --neon-secondary: #FF00FF;
+    /* Magenta Neon */
+    --neon-success: #00FF00;
+    /* Electric Green Neon */
+    --neon-warning: #FF8000;
+    /* Electric Orange Neon */
+    --neon-danger: #FF00FF;
+    /* Magenta Neon (Intense Danger) */
+
+    --dark-secondary: #222222;
+    /* Secondary Dark */
+    --text-muted: #999999;
+    /* Muted Grey */
+}
+
+/* --- GENERAL BODY STYLES --- */
+body {
+    background-color: var(--bs-body-bg) !important;
+    /* Override Bootstrap body bg */
+    color: var(--bs-body-color) !important;
+    /* Override Bootstrap body color */
+    font-family: var(--bs-font-sans-serif) !important;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em;
+}
+
+h1,
+.h1 {
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+h2,
+.h2 {
+    color: var(--neon-secondary) !important;
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
+}
+
+h3,
+.h3 {
+    color: var(--neon-success) !important;
+    text-shadow: 0 0 6px rgba(0, 255, 0, 0.7);
+}
+
+h4,
+.h4 {
+    color: var(--neon-warning) !important;
+    text-shadow: 0 0 5px rgba(255, 128, 0, 0.7);
+}
+
+h5,
+.h5 {
+    color: var(--neon-primary) !important;
+}
+
+h6,
+.h6 {
+    color: var(--neon-secondary) !important;
+}
+
+p {
+    font-weight: 400 !important;
+}
+
+a {
+    color: var(--neon-primary) !important;
+    text-decoration: none !important;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8) !important;
+}
+
+hr {
+    border-top-color: var(--text-muted) !important;
+    opacity: 0.2;
+}
+
+/* --- BOOTSTRAP ELEMENT OVERRIDES --- */
+
+/* --- Buttons --- */
+.btn {
+    border-radius: 0 !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em;
+    border-width: 2px !important;
+    box-shadow: none !important;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.btn-primary {
+    background-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: rgba(0, 255, 255, 0.8) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8) !important;
+}
+
+.btn-secondary {
+    background-color: var(--neon-secondary) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-secondary) !important;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: rgba(255, 0, 255, 0.8) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-secondary) !important;
+    box-shadow: 0 0 12px rgba(255, 0, 255, 0.8) !important;
+}
+
+.btn-success {
+    background-color: var(--neon-success) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-success) !important;
+    box-shadow: 0 0 6px rgba(0, 255, 0, 0.5) !important;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: rgba(0, 255, 0, 0.8) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-success) !important;
+    box-shadow: 0 0 9px rgba(0, 255, 0, 0.8) !important;
+}
+
+.btn-warning {
+    background-color: var(--neon-warning) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-warning) !important;
+    box-shadow: 0 0 5px rgba(255, 128, 0, 0.5) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background-color: rgba(255, 128, 0, 0.8) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-warning) !important;
+    box-shadow: 0 0 7px rgba(255, 128, 0, 0.8) !important;
+}
+
+.btn-danger {
+    background-color: var(--neon-danger) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-danger) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7) !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: rgba(255, 0, 255, 0.9) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-danger) !important;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.9) !important;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-warning,
+.btn-outline-danger {
+    background-color: transparent !important;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.btn-outline-primary {
+    color: var(--neon-primary) !important;
+    border-color: var(--neon-primary) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--neon-secondary) !important;
+    border-color: var(--neon-secondary) !important;
+}
+
+.btn-outline-success {
+    color: var(--neon-success) !important;
+    border-color: var(--neon-success) !important;
+}
+
+.btn-outline-warning {
+    color: var(--neon-warning) !important;
+    border-color: var(--neon-warning) !important;
+}
+
+.btn-outline-danger {
+    color: var(--neon-danger) !important;
+    border-color: var(--neon-danger) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: var(--neon-secondary) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-secondary) !important;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5) !important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    background-color: var(--neon-success) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-success) !important;
+    box-shadow: 0 0 6px rgba(0, 255, 0, 0.5) !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
+    background-color: var(--neon-warning) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-warning) !important;
+    box-shadow: 0 0 5px rgba(255, 128, 0, 0.5) !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    background-color: var(--neon-danger) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-danger) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7) !important;
+}
+
+
+/* --- Forms --- */
+.form-control {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--text-muted) !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 1rem !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+    outline: none !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.8;
+}
+
+.form-label {
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem !important;
+}
+
+.form-check-input {
+    border-radius: 0 !important;
+    border: 1px solid var(--text-muted) !important;
+    background-color: var(--dark-secondary) !important;
+    box-shadow: none !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--neon-primary) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+.form-check-input:focus {
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+.form-select {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--text-muted) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.form-select:focus {
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+    outline: none !important;
+}
+
+/* --- Navbar --- */
+.navbar-dark {
+    background-color: var(--bs-body-bg) !important;
+    border-bottom: 1px solid var(--text-muted);
+}
+
+.navbar-dark .navbar-brand {
+    color: var(--neon-primary) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+    transition: color 0.2s, text-shadow 0.2s !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--text-muted) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(153, 153, 153, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon,
+.navbar-toggler:focus .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* --- Cards --- */
+.card {
+    background-color: var(--dark-secondary) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--dark-secondary) !important;
+    border-bottom: 1px solid var(--text-muted) !important;
+    color: var(--bs-body-color) !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.card-title {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.card-text {
+    color: var(--bs-body-color) !important;
+}
+
+.card-img-top,
+.card-img-bottom {
+    border-radius: 0 !important;
+}
+
+/* --- Modals --- */
+.modal-content {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--text-muted) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: var(--bs-body-bg) !important;
+    border-bottom: 1px solid var(--text-muted) !important;
+    color: var(--bs-body-color) !important;
+}
+
+.modal-title {
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+.modal-header .btn-close {
+    background-color: transparent !important;
+    border: none !important;
+    opacity: 0.7 !important;
+    color: var(--text-muted) !important;
+    filter: invert(1);
+    /* Invert close icon for better visibility on dark background */
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1 !important;
+    color: var(--bs-body-color) !important;
+}
+
+
+/* --- Alerts --- */
+.alert {
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 1rem 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.alert-primary {
+    background-color: rgba(0, 255, 255, 0.1) !important;
+    color: var(--neon-primary) !important;
+    border: 1px solid var(--neon-primary) !important;
+}
+
+.alert-secondary {
+    background-color: rgba(255, 0, 255, 0.1) !important;
+    color: var(--neon-secondary) !important;
+    border: 1px solid var(--neon-secondary) !important;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 0, 0.1) !important;
+    color: var(--neon-success) !important;
+    border: 1px solid var(--neon-success) !important;
+}
+
+.alert-warning {
+    background-color: rgba(255, 128, 0, 0.1) !important;
+    color: var(--neon-warning) !important;
+    border: 1px solid var(--neon-warning) !important;
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 255, 0.2) !important;
+    color: var(--neon-danger) !important;
+    border: 1px solid var(--neon-danger) !important;
+    font-weight: 700 !important;
+}
+
+.alert-link {
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+/* --- Tables --- */
+.table-dark {
+    color: var(--bs-body-color) !important;
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: var(--dark-secondary) !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.table-dark thead th {
+    background-color: var(--dark-secondary) !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 3px rgba(0, 255, 255, 0.5);
+}
+
+.table-dark tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 255, 255, 0.1) !important;
+}
+
+.table-bordered {
+    border-color: var(--dark-secondary) !important;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-color: var(--dark-secondary) !important;
+}
+
+/* --- Progress Bars --- */
+.progress {
+    background-color: var(--dark-secondary) !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.progress-bar {
+    background-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 3px rgba(0, 255, 255, 0.8) !important;
+    border-radius: 0 !important;
+}
+
+/* --- List Group --- */
+.list-group-item {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border-color: var(--text-muted) !important;
+    border-radius: 0 !important;
+}
+
+.list-group-item.active {
+    background-color: var(--neon-primary) !important;
+    border-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7) !important;
+}
+
+/* --- Pagination --- */
+.page-link {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--text-muted) !important;
+    border-radius: 0 !important;
+    margin: 0 0.2rem !important;
+}
+
+.page-link:hover,
+.page-link:focus {
+    background-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    border-color: var(--neon-primary) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--neon-primary) !important;
+    border-color: var(--neon-primary) !important;
+    color: var(--bs-body-bg) !important;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* --- Tooltips & Popovers --- */
+.tooltip-inner,
+.popover-body,
+.popover-header {
+    background-color: var(--dark-secondary) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--text-muted) !important;
+    border-radius: 0 !important;
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--dark-secondary) !important;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+    border-bottom-color: var(--dark-secondary) !important;
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+    border-left-color: var(--dark-secondary) !important;
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-right-color: var(--dark-secondary) !important;
+}
+
+.popover-header {
+    border-bottom-color: var(--text-muted) !important;
+}
+
+
+/* --- CUSTOM UTILITY CLASSES (EXAMPLES - ADD MORE AS NEEDED) --- */
+.text-neon-primary {
+    color: var(--neon-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.text-neon-secondary {
+    color: var(--neon-secondary) !important;
+    text-shadow: 0 0 4px rgba(255, 0, 255, 0.5);
+}
+
+.text-neon-success {
+    color: var(--neon-success) !important;
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
+}
+
+.text-neon-warning {
+    color: var(--neon-warning) !important;
+    text-shadow: 0 0 2px rgba(255, 128, 0, 0.5);
+}
+
+.text-neon-danger {
+    color: var(--neon-danger) !important;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
+}
+
+.bg-dark-secondary {
+    background-color: var(--dark-secondary) !important;
+}
+
+.text-muted-custom {
+    color: var(--text-muted) !important;
+}
+
+.font-monospace-cyberpunk {
+    font-family: var(--bs-font-monospace) !important;
+}
+
+.text-uppercase-cyberpunk {
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em;
+}

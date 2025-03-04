@@ -1,0 +1,928 @@
+/* Neo-Brutalism Neon Bootstrap 5.3 Override CSS */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+/* ================================================== */
+/*  Global Styles & Resets                               */
+/* ================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Base font */
+    font-weight: 400;
+    background-color: #333333;
+    /* Charcoal Grey Background */
+    color: #F0F0F0;
+    /* Off-White Text */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    /* Grotesque Font for Headings */
+    font-weight: 400;
+    color: #FFFF00;
+    /* Vibrant Yellow Headings */
+    line-height: 1.2;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    /* Optional: Uppercase Headings for Brutalist Feel */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #00FF00;
+    /* Bright Green Links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #FF6F00;
+    /* Neon Orange Hover/Focus Links */
+    text-decoration: none;
+    /* Keep no underline */
+}
+
+hr {
+    border-top: 2px solid #8A2BE2;
+    /* Dark Purple HR */
+    border-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ================================================== */
+/*  Bootstrap Overrides - Core Components              */
+/* ================================================== */
+
+/* Body and General Container */
+body {
+    background-color: #333333;
+    /* Charcoal Grey Background */
+    color: #F0F0F0;
+    /* Off-White Text */
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    /* No major container overrides initially, can add specific padding if needed */
+}
+
+/* Typography Overrides (Bootstrap defaults) */
+body {
+    --bs-body-font-family: 'Montserrat', sans-serif;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.6;
+    --bs-body-color: #F0F0F0;
+    --bs-body-bg: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #FFFF00;
+    /* Vibrant Yellow Headings */
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.lead {
+    font-weight: 700;
+    /* Make lead text bolder */
+}
+
+
+/* Buttons */
+.btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    border: 2px solid transparent;
+    border-radius: 0;
+    /* No rounded corners */
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: 1.5;
+}
+
+.btn:hover,
+.btn:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.btn-primary {
+    background-color: #003049;
+    /* Prussian Blue Primary Button */
+    color: #FFFF00;
+    /* Vibrant Yellow Text */
+    border-color: #FFFF00;
+    /* Vibrant Yellow Border */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #FFFF00;
+    /* Vibrant Yellow Hover/Focus Background */
+    color: #003049;
+    /* Prussian Blue Text */
+    border-color: #FFFF00;
+    /* Keep Yellow Border */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FF6F00;
+    /* Neon Orange Secondary Button */
+    border-color: #FF6F00;
+    /* Neon Orange Border */
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #FF6F00;
+    /* Neon Orange Hover/Focus Background */
+    color: #333333;
+    /* Charcoal Grey Text */
+    border-color: #FF6F00;
+    /* Keep Orange Border */
+}
+
+.btn-success {
+    background-color: #00FF00;
+    /* Bright Green Success Button */
+    color: #333333;
+    /* Charcoal Grey Text */
+    border-color: #00FF00;
+    /* Bright Green Border */
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #333333;
+    /* Charcoal Grey Hover/Focus Background */
+    color: #00FF00;
+    /* Bright Green Text */
+    border-color: #00FF00;
+    /* Keep Green Border */
+}
+
+.btn-danger {
+    background-color: #FF0000;
+    /* Intense Red Danger Button */
+    color: #F0F0F0;
+    /* Off-White Text */
+    border-color: #FF0000;
+    /* Intense Red Border */
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: #F0F0F0;
+    /* Off-White Hover/Focus Background */
+    color: #FF0000;
+    /* Intense Red Text */
+    border-color: #FF0000;
+    /* Keep Red Border */
+}
+
+.btn-warning {
+    background-color: #FF6F00;
+    /* Neon Orange Warning Button */
+    color: #333333;
+    /* Charcoal Grey Text */
+    border-color: #FF6F00;
+    /* Neon Orange Border */
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background-color: #333333;
+    /* Charcoal Grey Hover/Focus Background */
+    color: #FF6F00;
+    /* Neon Orange Text */
+    border-color: #FF6F00;
+    /* Keep Orange Border */
+}
+
+.btn-info {
+    background-color: #00FFFF;
+    /* Cyan Info Button */
+    color: #333333;
+    /* Charcoal Grey Text */
+    border-color: #00FFFF;
+    /* Cyan Border */
+}
+
+.btn-info:hover,
+.btn-info:focus {
+    background-color: #333333;
+    /* Charcoal Grey Hover/Focus Background */
+    color: #00FFFF;
+    /* Cyan Text */
+    border-color: #00FFFF;
+    /* Keep Cyan Border */
+}
+
+.btn-light {
+    /* Overriding Bootstrap light to be Neon-like */
+    background-color: #F0F0F0;
+    /* Off-White Light Button */
+    color: #333333;
+    /* Charcoal Grey Text */
+    border-color: #F0F0F0;
+    /* Off-White Border */
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: #333333;
+    /* Charcoal Grey Hover/Focus Background */
+    color: #F0F0F0;
+    /* Off-White Text */
+    border-color: #F0F0F0;
+    /* Keep Off-White Border */
+}
+
+.btn-dark {
+    background-color: #8A2BE2;
+    /* Dark Purple Dark Button */
+    color: #F0F0F0;
+    /* Off-White Text */
+    border-color: #8A2BE2;
+    /* Dark Purple Border */
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    background-color: #F0F0F0;
+    /* Off-White Hover/Focus Background */
+    color: #8A2BE2;
+    /* Dark Purple Text */
+    border-color: #8A2BE2;
+    /* Keep Dark Purple Border */
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info,
+.btn-outline-light,
+.btn-outline-dark {
+    background-color: transparent;
+    /* Outlined buttons have transparent backgrounds */
+    border: 2px solid;
+    /* Set border width */
+    border-radius: 0;
+    /* No rounded corners */
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-primary {
+    color: #FFFF00;
+    /* Vibrant Yellow Outline Button */
+    border-color: #FFFF00;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: #FFFF00;
+    color: #003049;
+    border-color: #FFFF00;
+}
+
+.btn-outline-secondary {
+    color: #FF6F00;
+    /* Neon Orange Outline Button */
+    border-color: #FF6F00;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: #FF6F00;
+    color: #333333;
+    border-color: #FF6F00;
+}
+
+.btn-outline-success {
+    color: #00FF00;
+    /* Bright Green Outline Button */
+    border-color: #00FF00;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    background-color: #00FF00;
+    color: #333333;
+    border-color: #00FF00;
+}
+
+.btn-outline-danger {
+    color: #FF0000;
+    /* Intense Red Outline Button */
+    border-color: #FF0000;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    background-color: #FF0000;
+    color: #F0F0F0;
+    border-color: #FF0000;
+}
+
+.btn-outline-warning {
+    color: #FF6F00;
+    /* Neon Orange Outline Button */
+    border-color: #FF6F00;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
+    background-color: #FF6F00;
+    color: #333333;
+    border-color: #FF6F00;
+}
+
+.btn-outline-info {
+    color: #00FFFF;
+    /* Cyan Outline Button */
+    border-color: #00FFFF;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+    background-color: #00FFFF;
+    color: #333333;
+    border-color: #00FFFF;
+}
+
+.btn-outline-light {
+    color: #F0F0F0;
+    /* Off-White Outline Button */
+    border-color: #F0F0F0;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    background-color: #F0F0F0;
+    color: #333333;
+    border-color: #F0F0F0;
+}
+
+.btn-outline-dark {
+    color: #8A2BE2;
+    /* Dark Purple Outline Button */
+    border-color: #8A2BE2;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+    background-color: #8A2BE2;
+    color: #F0F0F0;
+    border-color: #8A2BE2;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #0A1128;
+    /* Dark Navy Navbar Background */
+    border-bottom: 2px solid #FFFF00;
+    /* Vibrant Yellow Border Bottom */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #FFFF00;
+    /* Vibrant Yellow Brand Text */
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #FFFF00;
+    /* Keep Yellow on hover/focus */
+}
+
+.navbar-nav .nav-link {
+    color: #F0F0F0;
+    /* Off-White Nav Links */
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #00FF00;
+    /* Bright Green Nav Link Hover/Focus */
+}
+
+.navbar-nav .nav-link.active {
+    color: #FF6F00;
+    /* Neon Orange Active Nav Link */
+}
+
+.navbar-toggler {
+    border: 2px solid #FFFF00;
+    /* Yellow Toggler Border */
+    border-radius: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    /* Remove default focus shadow */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23FFFF00' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Yellow Toggler Icon */
+}
+
+
+/* Cards */
+.card {
+    background-color: #333333;
+    /* Charcoal Grey Card Background */
+    border: 2px solid #FF6F00;
+    /* Neon Orange Card Border */
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+}
+
+.card-header,
+.card-footer {
+    background-color: #0A1128;
+    /* Dark Navy Card Header/Footer */
+    border-bottom: 2px solid #FF6F00;
+    /* Neon Orange Separator */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.card-header:first-child {
+    border-radius: 0;
+}
+
+.card-footer:last-child {
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    color: #FFFF00;
+    /* Vibrant Yellow Card Title */
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #F0F0F0;
+    /* Off-White Card Text */
+}
+
+/* Forms */
+.form-control {
+    background-color: #0A1128;
+    /* Dark Navy Input Background */
+    color: #F0F0F0;
+    /* Off-White Input Text */
+    border: 2px solid #00FF00;
+    /* Bright Green Input Border */
+    border-radius: 0;
+    padding: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-control:focus {
+    background-color: #0A1128;
+    /* Keep background on focus */
+    color: #F0F0F0;
+    /* Keep text color */
+    border-color: #FFFF00;
+    /* Vibrant Yellow Focus Border */
+    box-shadow: none;
+    /* Remove default focus shadow */
+    outline: 0;
+}
+
+.form-label {
+    color: #FF6F00;
+    /* Neon Orange Label */
+    font-weight: 700;
+    /* Make labels bold */
+    margin-bottom: 0.5rem;
+    display: block;
+    /* Ensure labels are block level */
+}
+
+.form-text {
+    color: #F0F0F0;
+    /* Off-White Form Text (help text) */
+}
+
+.form-check-input {
+    border: 2px solid #00FF00;
+    /* Bright Green Checkbox Border */
+    border-radius: 0;
+}
+
+.form-check-input:checked {
+    background-color: #00FF00;
+    /* Bright Green Checkbox Checked Background */
+    border-color: #00FF00;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    /* Remove focus shadow */
+    border-color: #FFFF00;
+    /* Vibrant Yellow Focus Border */
+}
+
+.form-select {
+    background-color: #0A1128;
+    /* Dark Navy Select Background */
+    color: #F0F0F0;
+    /* Off-White Select Text */
+    border: 2px solid #00FF00;
+    /* Bright Green Select Border */
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-select:focus {
+    border-color: #FFFF00;
+    /* Vibrant Yellow Focus Border */
+    box-shadow: none;
+    /* Remove focus shadow */
+    outline: 0;
+}
+
+.form-range {
+    background-color: transparent;
+    /* Ensure track is transparent */
+}
+
+.form-range::-webkit-slider-thumb,
+.form-range::-moz-range-thumb,
+.form-range::-ms-thumb {
+    background-color: #FFFF00;
+    /* Vibrant Yellow Range Thumb */
+    border: 0;
+    border-radius: 0;
+    /* Square thumb */
+}
+
+.form-range::-webkit-slider-thumb:active,
+.form-range::-moz-range-thumb:active,
+.form-range::-ms-thumb:active {
+    background-color: #FF6F00;
+    /* Neon Orange Active Range Thumb */
+}
+
+.form-range:focus::-webkit-slider-thumb,
+.form-range:focus::-moz-range-thumb,
+.form-range:focus::-ms-thumb {
+    box-shadow: none;
+    /* Remove thumb focus shadow */
+}
+
+
+/* List Groups */
+.list-group-item {
+    background-color: #333333;
+    /* Charcoal Grey List Item Background */
+    border: 2px solid #8A2BE2;
+    /* Dark Purple List Item Border */
+    color: #F0F0F0;
+    /* Off-White List Item Text */
+    border-radius: 0;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+    border-radius: 0;
+    /* No rounded corners on list group items */
+}
+
+.list-group-item.active {
+    background-color: #00FF00;
+    /* Bright Green Active List Item */
+    color: #333333;
+    /* Charcoal Grey Active Text */
+    border-color: #00FF00;
+}
+
+/* Alerts */
+.alert {
+    border: 2px solid;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.alert-primary {
+    background-color: #003049;
+    border-color: #FFFF00;
+    color: #FFFF00;
+}
+
+.alert-secondary {
+    background-color: transparent;
+    border-color: #FF6F00;
+    color: #FF6F00;
+}
+
+.alert-success {
+    background-color: #00FF00;
+    border-color: #00FF00;
+    color: #333333;
+}
+
+.alert-danger {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: #F0F0F0;
+}
+
+.alert-warning {
+    background-color: #FF6F00;
+    border-color: #FF6F00;
+    color: #333333;
+}
+
+.alert-info {
+    background-color: #00FFFF;
+    border-color: #00FFFF;
+    color: #333333;
+}
+
+.alert-light {
+    background-color: #F0F0F0;
+    border-color: #F0F0F0;
+    color: #333333;
+}
+
+.alert-dark {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2;
+    color: #F0F0F0;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: #0A1128;
+    /* Dark Navy Progress Track */
+    border-radius: 0;
+    overflow: hidden;
+    /* Ensure rounded corners are clipped if any */
+}
+
+.progress-bar {
+    background-color: #FFFF00;
+    /* Vibrant Yellow Progress Bar */
+}
+
+/* Pagination */
+.pagination .page-link {
+    background-color: #333333;
+    /* Charcoal Grey Pagination Background */
+    border: 2px solid #8A2BE2;
+    /* Dark Purple Pagination Border */
+    color: #F0F0F0;
+    /* Off-White Pagination Text */
+    border-radius: 0;
+    margin-left: -2px;
+    /* Adjust spacing between pages */
+}
+
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    background-color: #00FF00;
+    /* Bright Green Pagination Hover/Focus */
+    color: #333333;
+    border-color: #00FF00;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FF6F00;
+    /* Neon Orange Active Pagination */
+    border-color: #FF6F00;
+    color: #333333;
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+    /* No rounded corners on first/last pagination items */
+}
+
+/* Badges */
+.badge {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+}
+
+.badge-primary {
+    background-color: #003049;
+    color: #FFFF00;
+}
+
+.badge-secondary {
+    background-color: #FF6F00;
+    color: #333333;
+}
+
+.badge-success {
+    background-color: #00FF00;
+    color: #333333;
+}
+
+.badge-danger {
+    background-color: #FF0000;
+    color: #F0F0F0;
+}
+
+.badge-warning {
+    background-color: #FF6F00;
+    color: #333333;
+}
+
+/* Reusing Orange, consider a slight variation if needed */
+.badge-info {
+    background-color: #00FFFF;
+    color: #333333;
+}
+
+.badge-light {
+    background-color: #F0F0F0;
+    color: #333333;
+}
+
+.badge-dark {
+    background-color: #8A2BE2;
+    color: #F0F0F0;
+}
+
+
+/* ================================================== */
+/*  Utility Classes (Example - Add more as needed)      */
+/* ================================================== */
+
+.text-neon-yellow {
+    color: #FFFF00 !important;
+}
+
+.text-neon-orange {
+    color: #FF6F00 !important;
+}
+
+.text-prussian-blue {
+    color: #003049 !important;
+}
+
+.text-intense-red {
+    color: #FF0000 !important;
+}
+
+.text-bright-green {
+    color: #00FF00 !important;
+}
+
+.text-dark-purple {
+    color: #8A2BE2 !important;
+}
+
+.bg-neon-yellow {
+    background-color: #FFFF00 !important;
+    color: #333333 !important;
+}
+
+/* Ensure good contrast */
+.bg-neon-orange {
+    background-color: #FF6F00 !important;
+    color: #333333 !important;
+}
+
+.bg-prussian-blue {
+    background-color: #003049 !important;
+    color: #FFFF00 !important;
+}
+
+.bg-intense-red {
+    background-color: #FF0000 !important;
+    color: #F0F0F0 !important;
+}
+
+.bg-bright-green {
+    background-color: #00FF00 !important;
+    color: #333333 !important;
+}
+
+.bg-dark-purple {
+    background-color: #8A2BE2 !important;
+    color: #F0F0F0 !important;
+}
+
+
+/* ================================================== */
+/*  Custom Components or Specific Layout Styles (Add here)*/
+/* ================================================== */
+
+/* Example: Visible Grid (Optional - for extreme brutalism) */
+/* .container {
+    outline: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.row > * {
+    outline: 1px dotted rgba(255, 255, 255, 0.05);
+} */
+
+
+/* Add more overrides and custom styles below this line */

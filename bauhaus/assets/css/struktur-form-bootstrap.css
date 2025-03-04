@@ -1,0 +1,484 @@
+/* Struktur & Form - Bauhaus Inspired Bootstrap 5.3 Override */
+
+/* Google Font Import - Inter (or choose Roboto/Avenir as per guide) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* ---------------------------------------- */
+/*  1. Global Styles & Color Palette        */
+/* ---------------------------------------- */
+
+:root {
+    /* --- Color Palette "Natural Ground" --- */
+    --concrete-gray: #E0E0E0;
+    --steel-gray: #BDBDBD;
+    --white: #FFFFFF;
+    --weathered-wood: #A07A5A;
+    --charcoal-gray: #424242;
+    --muted-brick-red: #B71C1C;
+
+    /* --- Bootstrap Theme Colors Override --- */
+    --bs-primary: var(--steel-gray);
+    /* Steel Gray for Primary */
+    --bs-secondary: var(--concrete-gray);
+    /* Concrete Gray for Secondary */
+    --bs-success: #4CAF50;
+    /* Keep Bootstrap defaults or adjust to muted green if desired */
+    --bs-info: #29B6F6;
+    /* Keep Bootstrap defaults or adjust to muted blue if desired */
+    --bs-warning: #FFC107;
+    /* Keep Bootstrap defaults or adjust to muted yellow/ochre if desired */
+    --bs-danger: var(--muted-brick-red);
+    /* Muted Brick Red for Danger */
+    --bs-light: var(--concrete-gray);
+    /* Concrete Gray for Light */
+    --bs-dark: var(--charcoal-gray);
+    /* Charcoal Gray for Dark */
+
+    /* --- Text & Background Colors --- */
+    --bs-body-bg: var(--concrete-gray);
+    /* Concrete Gray Background */
+    --bs-body-color: var(--charcoal-gray);
+    /* Charcoal Gray Text */
+    --bs-emphasis-color: var(--charcoal-gray);
+    /* Stronger Charcoal Text */
+    --bs-link-color: var(--charcoal-gray);
+    /* Charcoal Gray Links */
+    --bs-link-hover-color: var(--weathered-wood);
+    /* Weathered Wood on Hover */
+    --bs-border-color: var(--steel-gray);
+    /* Steel Gray Borders */
+    --bs-border-width: 1px;
+
+    /* --- Typography --- */
+    --bs-font-sans-serif: 'Inter', sans-serif;
+    /* Primary Font - Inter */
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-heading-font-family: var(--bs-font-sans-serif);
+    --bs-font-monospace: monospace;
+    /* Keep default monospace or choose a Bauhaus-aligned one if desired */
+    --bs-body-font-size: 1rem;
+    /* Adjust as needed for body text size */
+    --bs-body-font-weight: 400;
+    /* Regular */
+    --bs-body-line-height: 1.6;
+    /* Generous Line Height */
+    --bs-heading-font-weight: 700;
+    /* Bold for Headings */
+    --bs-heading-line-height: 1.2;
+    --bs-letter-spacing: 0.02em;
+    /* Slight Letter Spacing */
+
+    /* --- Spacing & Layout --- */
+    --bs-spacer: 1rem;
+    /* Base spacing unit */
+    --bs-border-radius: 0;
+    /* No Rounded Corners - Geometric Forms */
+    --bs-border-radius-sm: 0;
+    --bs-border-radius-lg: 0;
+    --bs-border-radius-xl: 0;
+    --bs-border-radius-2xl: 0;
+    --bs-border-radius-pill: 0;
+
+    /* --- Shadows --- */
+    --bs-box-shadow: none;
+    /* Remove default shadows - Minimalist */
+    --bs-box-shadow-sm: none;
+    --bs-box-shadow-lg: none;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    letter-spacing: var(--bs-letter-spacing);
+}
+
+/* ---------------------------------------- */
+/*  2. Typography Overrides                 */
+/* ---------------------------------------- */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: var(--bs-heading-font-family);
+    font-weight: var(--bs-heading-font-weight);
+    line-height: var(--bs-heading-line-height);
+    color: var(--bs-emphasis-color);
+    /* Use emphasis color for headings */
+    margin-bottom: 0.75rem;
+    /* Adjust heading spacing */
+}
+
+p {
+    margin-bottom: 1rem;
+    /* Adjust paragraph spacing */
+}
+
+a {
+    color: var(--bs-link-color);
+    text-decoration: none;
+    /* Remove underlines by default */
+    font-weight: 500;
+    /* Slightly bolder links */
+}
+
+a:hover {
+    color: var(--bs-link-hover-color);
+    text-decoration: underline;
+    /* Underline on hover for clarity */
+}
+
+/* ---------------------------------------- */
+/*  3. Button Overrides                     */
+/* ---------------------------------------- */
+
+.btn {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 500;
+    /* Medium weight for buttons */
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    padding: 0.75rem 1.5rem;
+    /* Adjust button padding */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    letter-spacing: var(--bs-letter-spacing);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--white);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--charcoal-gray);
+    /* Darker gray on hover/focus */
+    color: var(--white);
+    border-color: var(--charcoal-gray);
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    color: var(--charcoal-gray);
+    border-color: var(--bs-secondary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: var(--steel-gray);
+    /* Slightly darker secondary on hover/focus */
+    color: var(--charcoal-gray);
+    border-color: var(--steel-gray);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--bs-primary);
+    color: var(--white);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: var(--bs-secondary);
+    color: var(--charcoal-gray);
+    border-color: var(--bs-secondary);
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 2px solid var(--weathered-wood);
+    /* Weathered wood focus outline */
+    outline-offset: 2px;
+    box-shadow: none;
+    /* Remove default focus shadow */
+}
+
+.btn-check:active+.btn:focus,
+.btn-check:checked+.btn:focus,
+.btn.active:focus,
+.btn.show:focus {
+    box-shadow: none;
+    /* Remove active/checked focus shadow */
+}
+
+
+/* ---------------------------------------- */
+/*  4. Form Overrides                      */
+/* ---------------------------------------- */
+
+.form-control {
+    font-family: var(--bs-font-sans-serif);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: var(--white);
+    color: var(--bs-body-color);
+    padding: 0.75rem;
+    box-shadow: none;
+    /* Remove default input shadow */
+}
+
+.form-control:focus {
+    border-color: var(--weathered-wood);
+    /* Weathered wood focus border */
+    box-shadow: none;
+    /* Remove focus shadow */
+    outline: 0;
+    /* Remove default outline */
+}
+
+.form-label {
+    font-weight: 500;
+    /* Medium weight for form labels */
+    margin-bottom: 0.5rem;
+    color: var(--charcoal-gray);
+}
+
+.form-text {
+    color: var(--steel-gray);
+    /* Muted gray for form text */
+}
+
+.form-check-input:focus {
+    border-color: var(--weathered-wood);
+    box-shadow: none;
+    outline: 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.form-select {
+    font-family: var(--bs-font-sans-serif);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: var(--white);
+    color: var(--bs-body-color);
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: var(--weathered-wood);
+    box-shadow: none;
+    outline: 0;
+}
+
+
+/* ---------------------------------------- */
+/*  5. Navigation Overrides                  */
+/* ---------------------------------------- */
+
+.navbar {
+    background-color: var(--concrete-gray);
+    /* Concrete Gray Navbar background */
+    border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    /* Bold Navbar brand */
+    color: var(--charcoal-gray);
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--charcoal-gray);
+}
+
+.nav-link {
+    color: var(--charcoal-gray);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--weathered-wood);
+}
+
+.nav-link.active {
+    color: var(--weathered-wood);
+    /* Weathered wood for active link */
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: 2px solid var(--weathered-wood);
+    outline-offset: 2px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(66, 66, 66, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Charcoal gray hamburger icon */
+}
+
+
+/* ---------------------------------------- */
+/*  6. Card Overrides                       */
+/* ---------------------------------------- */
+
+.card {
+    background-color: var(--white);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    box-shadow: none;
+    /* Remove default card shadow */
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--concrete-gray);
+    border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+    border-top: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+    color: var(--steel-gray);
+    margin-bottom: 1rem;
+}
+
+
+/* ---------------------------------------- */
+/*  7. Modal Overrides                      */
+/* ---------------------------------------- */
+
+.modal-content {
+    background-color: var(--white);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    box-shadow: none;
+    /* Remove modal shadow */
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--bs-border-color);
+    background-color: var(--concrete-gray);
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Darker backdrop */
+}
+
+
+/* ---------------------------------------- */
+/*  8. Alert Overrides                      */
+/* ---------------------------------------- */
+
+.alert {
+    border: var(--bs-border-width) solid transparent;
+    border-radius: var(--bs-border-radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.alert-primary {
+    background-color: rgba(var(--bs-primary-rgb), 0.15);
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+}
+
+.alert-secondary {
+    background-color: rgba(var(--bs-secondary-rgb), 0.15);
+    border-color: var(--bs-secondary);
+    color: var(--bs-secondary);
+}
+
+.alert-danger {
+    background-color: rgba(var(--bs-danger-rgb), 0.15);
+    border-color: var(--bs-danger);
+    color: var(--bs-danger);
+}
+
+/* ---------------------------------------- */
+/*  9. List Group Overrides                  */
+/* ---------------------------------------- */
+
+.list-group-item {
+    background-color: var(--white);
+    border-color: var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+}
+
+.list-group-item.active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--white);
+}
+
+
+/* ---------------------------------------- */
+/*  10. Utilities - Spacing (Example)         */
+/* ---------------------------------------- */
+
+/* You can further customize spacing utilities if needed.
+   For example, to ensure consistent whitespace based on your spacing unit */
+/* .mt-1, .my-1 { margin-top: calc(var(--bs-spacer) * .25) !important; }  */
+/* ... and so on for other spacing classes ... */
+
+
+/* ---------------------------------------- */
+/*  11. Custom Components (Example - Divider) */
+/* ---------------------------------------- */
+
+.divider {
+    border-top: var(--bs-border-width) solid var(--bs-border-color);
+    margin: 2rem 0;
+    /* Example divider spacing */
+}
+
+
+/* Add more overrides as needed for other Bootstrap components and utilities */
+/* Remember to inspect Bootstrap's default styles in your browser's developer tools */
+/* to identify the specific classes and properties you need to override. */

@@ -1,0 +1,591 @@
+/* --- Extreme Steampunk Bootstrap 5.3 Theme CSS --- */
+
+/* --- 1. Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
+
+/* --- 2. Color Palette Variables --- */
+:root {
+    --bs-primary: #B87333;
+    /* Brass Gold */
+    --bs-secondary: #8B4513;
+    /* Saddle Brown */
+    --bs-success: #556B2F;
+    /* Dark Olive Green */
+    --bs-danger: #8B0000;
+    /* Dark Red */
+    --bs-warning: #DAA520;
+    /* Goldenrod */
+    --bs-info: #708090;
+    /* Slate Gray */
+    --bs-light: #F5F5DC;
+    /* Beige */
+    --bs-dark: #333333;
+    /* Dark Gray */
+    --bs-body-bg: #E0D8B4;
+    /* Light Khaki */
+
+    --bs-font-sans-serif: 'Lora', serif;
+    /* Body Font */
+    --bs-font-monospace: 'Courier New', monospace;
+    --bs-font-special-elite: 'Special Elite', monospace;
+    /* Heading Font */
+
+    --bs-border-radius: 0.25rem;
+    --bs-border-radius-sm: 0.2rem;
+    --bs-border-radius-lg: 0.3rem;
+    --bs-border-width: 2px;
+
+    --bs-box-shadow-sm: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    --bs-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    --bs-box-shadow-lg: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+
+    --bs-link-color: var(--bs-primary);
+    --bs-link-decoration: none;
+    --bs-link-hover-color: color-mix(in srgb, var(--bs-primary) 85%, white);
+    --bs-link-hover-decoration: underline;
+}
+
+/* --- 3. General Body Styles --- */
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-dark);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--bs-font-special-elite);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+hr {
+    border-top: 2px dashed var(--bs-secondary);
+}
+
+/* --- 4. Bootstrap Component Overrides --- */
+
+/* --- Buttons --- */
+.btn {
+    border-width: var(--bs-border-width);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--bs-box-shadow-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: color-mix(in srgb, var(--bs-primary) 80%, black);
+    color: var(--bs-light);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: color-mix(in srgb, var(--bs-primary) 80%, black);
+    border-color: color-mix(in srgb, var(--bs-primary) 70%, black);
+    color: var(--bs-light);
+    box-shadow: inset var(--bs-box-shadow-sm);
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    color: var(--bs-light);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    color: var(--bs-light);
+    box-shadow: inset var(--bs-box-shadow-sm);
+}
+
+.btn-outline-primary {
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.btn-outline-secondary {
+    border-color: var(--bs-secondary);
+    color: var(--bs-secondary);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+    color: var(--bs-light);
+}
+
+
+/* --- Forms --- */
+.form-control,
+.form-select {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-width: var(--bs-border-width);
+    border-radius: 0;
+    /* Angular, mechanical look */
+    color: var(--bs-dark);
+    box-shadow: inset var(--bs-box-shadow-sm);
+    font-family: var(--bs-font-sans-serif);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: inset var(--bs-box-shadow), 0 0 0 0.25rem rgba(var(--bs-primary-rgb), .25);
+    background-color: color-mix(in srgb, var(--bs-secondary) 85%, white);
+}
+
+.form-label {
+    font-weight: bold;
+    color: var(--bs-dark);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+    /* Subtle highlight */
+    margin-bottom: 0.25rem;
+}
+
+.input-group-text {
+    background-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    color: var(--bs-light);
+    font-family: var(--bs-font-monospace);
+    /* Monospace for input addons */
+    border-width: var(--bs-border-width);
+    border-radius: 0;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: color-mix(in srgb, var(--bs-secondary) 85%, black);
+    border-bottom: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 75%, black);
+    box-shadow: var(--bs-box-shadow);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-family: var(--bs-font-special-elite);
+    font-size: 1.75rem;
+    color: var(--bs-primary);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: color-mix(in srgb, var(--bs-primary) 90%, white);
+}
+
+.navbar-nav .nav-link {
+    color: var(--bs-light);
+    padding: 0.75rem 1.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    border: 2px solid transparent;
+    border-radius: var(--bs-border-radius-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.15);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.dropdown-menu {
+    background-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    border: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 70%, black);
+    box-shadow: var(--bs-box-shadow-sm);
+    border-radius: 0;
+}
+
+.dropdown-item {
+    color: var(--bs-light);
+    font-family: var(--bs-font-sans-serif);
+    transition: background-color 0.15s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-light);
+}
+
+.navbar-toggler {
+    border-color: var(--bs-light);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(245, 245, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Light beige color for toggler icon */
+}
+
+
+/* --- Cards --- */
+.card {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-width: var(--bs-border-width);
+    box-shadow: var(--bs-box-shadow);
+    border-radius: var(--bs-border-radius);
+}
+
+.card-header,
+.card-footer {
+    background-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    color: var(--bs-light);
+    border-bottom-color: color-mix(in srgb, var(--bs-secondary) 75%, black);
+    border-top-color: color-mix(in srgb, var(--bs-secondary) 75%, black);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    padding: 0.75rem 1.25rem;
+    font-family: var(--bs-font-special-elite);
+}
+
+.card-body {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    color: var(--bs-dark);
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: var(--bs-font-special-elite);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Tables --- */
+.table {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-width: var(--bs-border-width);
+    box-shadow: var(--bs-box-shadow-sm);
+    border-radius: var(--bs-border-radius);
+    margin-bottom: 1rem;
+    border-collapse: separate;
+    /* Important for rounded corners on table */
+    border-spacing: 0;
+}
+
+.table thead th {
+    background-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    color: var(--bs-light);
+    border-bottom-color: color-mix(in srgb, var(--bs-secondary) 75%, black);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    padding: 0.75rem;
+    font-family: var(--bs-font-special-elite);
+    border-top: none;
+    /* Remove top border on thead th */
+    border-bottom: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 75%, black);
+}
+
+.table tbody tr {
+    background-color: transparent;
+    /* Make row background transparent to see table background */
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: rgba(var(--bs-secondary-rgb), 0.1);
+    /* Subtle striping */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+    /* Hover highlight */
+}
+
+.table td,
+.table th {
+    border-color: color-mix(in srgb, var(--bs-secondary) 75%, black);
+    padding: 0.75rem;
+    font-family: var(--bs-font-sans-serif);
+    border-top: none;
+    /* Remove top border on td and th */
+}
+
+.table td {
+    font-family: var(--bs-font-monospace);
+    /* Monospace for data */
+}
+
+.table-bordered {
+    border: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 75%, black);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 75%, black);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: rgba(var(--bs-secondary-rgb), 0.1);
+    /* For striped tables (if needed) */
+}
+
+.table-hover>tbody>tr:hover>* {
+    --bs-table-accent-bg: rgba(var(--bs-primary-rgb), 0.05);
+    /* For hover tables (if needed) */
+}
+
+/* --- List Groups --- */
+.list-group-item {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    border-color: color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-width: var(--bs-border-width);
+    color: var(--bs-dark);
+}
+
+.list-group-item-primary {
+    background-color: color-mix(in srgb, var(--bs-primary) 90%, white);
+    border-color: var(--bs-primary);
+    color: var(--bs-dark);
+}
+
+.list-group-item-secondary {
+    background-color: color-mix(in srgb, var(--bs-secondary) 90%, white);
+    border-color: var(--bs-secondary);
+    color: var(--bs-light);
+}
+
+
+/* --- Progress Bars --- */
+.progress {
+    background-color: color-mix(in srgb, var(--bs-secondary) 80%, black);
+    border-radius: 0;
+    box-shadow: inset var(--bs-box-shadow-sm);
+}
+
+.progress-bar {
+    background-color: var(--bs-primary);
+    box-shadow: var(--bs-box-shadow-sm);
+}
+
+/* --- Alerts --- */
+.alert {
+    border-width: var(--bs-border-width);
+    border-radius: 0;
+    box-shadow: var(--bs-box-shadow-sm);
+    font-weight: bold;
+}
+
+.alert-primary {
+    background-color: color-mix(in srgb, var(--bs-primary) 95%, white);
+    border-color: var(--bs-primary);
+    color: var(--bs-dark);
+}
+
+.alert-secondary {
+    background-color: color-mix(in srgb, var(--bs-secondary) 95%, white);
+    border-color: var(--bs-secondary);
+    color: var(--bs-light);
+}
+
+.alert-success {
+    background-color: color-mix(in srgb, var(--bs-success) 95%, white);
+    border-color: var(--bs-success);
+    color: var(--bs-dark);
+}
+
+.alert-danger {
+    background-color: color-mix(in srgb, var(--bs-danger) 95%, white);
+    border-color: var(--bs-danger);
+    color: var(--bs-light);
+}
+
+.alert-warning {
+    background-color: color-mix(in srgb, var(--bs-warning) 95%, white);
+    border-color: var(--bs-warning);
+    color: var(--bs-dark);
+}
+
+.alert-info {
+    background-color: color-mix(in srgb, var(--bs-info) 95%, white);
+    border-color: var(--bs-info);
+    color: var(--bs-dark);
+}
+
+/* --- Badges --- */
+.badge {
+    font-family: var(--bs-font-special-elite);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    border-radius: var(--bs-border-radius-sm);
+    box-shadow: var(--bs-box-shadow-sm);
+    padding: 0.4em 0.6em;
+}
+
+.badge-primary {
+    background-color: var(--bs-primary);
+}
+
+.badge-secondary {
+    background-color: var(--bs-secondary);
+}
+
+/* --- Tooltips --- */
+.tooltip-inner {
+    background-color: var(--bs-secondary);
+    color: var(--bs-light);
+    border: 1px solid color-mix(in srgb, var(--bs-secondary) 70%, black);
+    border-radius: var(--bs-border-radius-sm);
+    font-family: var(--bs-font-sans-serif);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+    border-bottom-color: var(--bs-secondary);
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+    border-top-color: var(--bs-secondary);
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-left-color: var(--bs-secondary);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+    border-right-color: var(--bs-secondary);
+}
+
+
+/* --- Typography Helpers --- */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.text-secondary {
+    color: var(--bs-secondary) !important;
+}
+
+.text-success {
+    color: var(--bs-success) !important;
+}
+
+.text-danger {
+    color: var(--bs-danger) !important;
+}
+
+.text-warning {
+    color: var(--bs-warning) !important;
+}
+
+.text-info {
+    color: var(--bs-info) !important;
+}
+
+.text-light {
+    color: var(--bs-light) !important;
+}
+
+.text-dark {
+    color: var(--bs-dark) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-light) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: var(--bs-light) !important;
+}
+
+.bg-success {
+    background-color: var(--bs-success) !important;
+    color: var(--bs-light) !important;
+}
+
+.bg-danger {
+    background-color: var(--bs-danger) !important;
+    color: var(--bs-light) !important;
+}
+
+.bg-warning {
+    background-color: var(--bs-warning) !important;
+    color: var(--bs-dark) !important;
+}
+
+.bg-info {
+    background-color: var(--bs-info) !important;
+    color: var(--bs-light) !important;
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+    color: var(--bs-dark) !important;
+}
+
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+    color: var(--bs-light) !important;
+}
+
+
+/* --- Custom Utilities (Example - Add more as needed) --- */
+.border-steampunk {
+    border: var(--bs-border-width) solid color-mix(in srgb, var(--bs-secondary) 70%, black) !important;
+}
+
+.rounded-steampunk {
+    border-radius: var(--bs-border-radius) !important;
+}
+
+.shadow-steampunk-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.shadow-steampunk {
+    box-shadow: var(--bs-box-shadow) !important;
+}
+
+.shadow-steampunk-lg {
+    box-shadow: var(--bs-box-shadow-lg) !important;
+}
+
+/* --- Add more component overrides and custom styles below as needed --- */
+/* --- Consider adding custom classes for gears, rivets, pipes, etc. for more extreme styling --- */

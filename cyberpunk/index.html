@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Web App Demo - Bootstrap 5.3 Theme</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to your cyberpunk-theme.css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+    <style>
+        /* --- Custom Demo Styles (Optional - for layout and spacing) --- */
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section>h2 {
+            margin-bottom: 20px;
+        }
+
+        .demo-container {
+            padding: 20px;
+            background-color: #222;
+            border: 1px solid #999;
+            margin-bottom: 20px;
+        }
+
+        .demo-element {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container-fluid">
+        <section id="typography">
+            <h2>Typography</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <h1 class="h1">Heading 1 - Neon Primary</h1>
+                    <h2 class="h2">Heading 2 - Neon Secondary</h2>
+                    <h3 class="h3">Heading 3 - Neon Success</h3>
+                    <h4 class="h4">Heading 4 - Neon Warning</h4>
+                    <h5 class="h5">Heading 5 - Neon Primary</h5>
+                    <h6 class="h6">Heading 6 - Neon Secondary</h6>
+                </div>
+                <div class="demo-element">
+                    <p>This is a paragraph with default body text styling. It's using the 'Rajdhani' font and light grey color. <a href="#">This is a link</a>.</p>
+                    <hr>
+                    <p class="text-muted-custom">This is muted text using a custom utility class.</p>
+                    <p class="font-monospace-cyberpunk">This text is in monospace font (Roboto Mono).</p>
+                    <p class="text-uppercase-cyberpunk">This text is uppercase with custom utility class.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="buttons">
+            <h2>Buttons</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-info" disabled>Info (Default - Not Styled)</button>
+                    <button type="button" class="btn btn-light" disabled>Light (Default - Not Styled)</button>
+                    <button type="button" class="btn btn-dark" disabled>Dark (Default - Not Styled)</button>
+                    <button type="button" class="btn btn-link" disabled>Link (Default - Not Styled)</button>
+                </div>
+                <div class="demo-element">
+                    <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+                    <button type="button" class="btn btn-outline-secondary">Outline Secondary</button>
+                    <button type="button" class="btn btn-outline-success">Outline Success</button>
+                    <button type="button" class="btn btn-outline-warning">Outline Warning</button>
+                    <button type="button" class="btn btn-outline-danger">Outline Danger</button>
+                    <button type="button" class="btn btn-outline-info" disabled>Outline Info (Default - Not Styled)</button>
+                    <button type="button" class="btn btn-outline-light" disabled>Outline Light (Default - Not Styled)</button>
+                    <button type="button" class="btn btn-outline-dark" disabled>Outline Dark (Default - Not Styled)</button>
+                </div>
+                <div class="demo-element">
+                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="forms">
+            <h2>Forms</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">File input</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="navigation">
+            <h2>Navigation</h2>
+            <div class="demo-container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark demo-element">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Cyberpunk Nav</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav class="nav flex-column demo-element">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </nav>
+            </div>
+        </section>
+
+        <section id="cards">
+            <h2>Cards</h2>
+            <div class="demo-container">
+                <div class="card demo-element" style="width: 18rem;">
+                    <img src="https://via.placeholder.com/286x180/222/EEE?text=Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card demo-element">
+                    <div class="card-header">
+                        Card Header
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-secondary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Card Footer
+                    </div>
+                </div>
+
+                <div class="card text-center demo-element">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-success">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alerts">
+            <h2>Alerts</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <div class="alert alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        A simple warning alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        A simple danger alert—check it out!
+                    </div>
+                </div>
+                <div class="demo-element">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="demo-element">
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="demo-element">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="progress-bars">
+            <h2>Progress Bars</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                </div>
+                <div class="demo-element">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                    </div>
+                </div>
+                <div class="demo-element">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    </div>
+                </div>
+                <div class="demo-element">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="list-groups">
+            <h2>List Groups</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <div class="demo-element">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pagination">
+            <h2>Pagination</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="tooltips-popovers">
+            <h2>Tooltips & Popovers</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+                        Tooltip on top
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+                        Tooltip on right
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+                        Tooltip on bottom
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+                        Tooltip on left
+                    </button>
+                </div>
+                <div class="demo-element">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-offset="0,8" data-bs-placement="top" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">
+                        Click to toggle popover
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="modals">
+            <h2>Modals</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade modal-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    This is a cyberpunk themed modal body. You can put any content here.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="icons">
+            <h2>Icons (Bootstrap Icons - Example)</h2>
+            <div class="demo-container">
+                <div class="demo-element">
+                    <i class="bi bi-cpu text-neon-primary fs-1"></i> <i class="bi bi-ethernet text-neon-secondary fs-2"></i> <i class="bi bi-memory text-neon-success fs-3"></i> <i class="bi bi-hdd-rack-fill text-neon-warning fs-4"></i> <i class="bi bi-bug-fill text-neon-danger fs-5"></i>
+                </div>
+                <div class="demo-element">
+                    <button type="button" class="btn btn-primary"><i class="bi bi-download me-2"></i> Download</button>
+                    <button type="button" class="btn btn-secondary"><i class="bi bi-upload me-2"></i> Upload</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips and popovers
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>

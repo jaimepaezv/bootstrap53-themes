@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Glass UI Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            /* Darker subtle background gradient */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            /* Ensure default body text is white for dark background */
+        }
+
+        .demo-container {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gravity-glass-primary-accent);
+        }
+
+        .hero-section {
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--gravity-glass-primary-accent);
+        }
+
+        .card-feature {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .card-feature i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gravity-glass-primary-accent);
+        }
+
+        .card-feature h5 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card-feature p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-glass navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-layers-fill me-2"></i> Gravity Glass UI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-code-square me-1"></i> Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-palette-fill me-1"></i> Style Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-download me-1"></i> Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section demo-container">
+        <div class="container">
+            <div class="glass-container gravity-reactive animate-fluctuation">
+                <h1>Experience Gravity Glass UI</h1>
+                <p>A neofuturistic web interface style guide pushing the boundaries of glassmorphism. Dynamic, interactive, and beautifully crafted for premium web applications. Built with Bootstrap 5.3.</p>
+                <button class="btn btn-primary btn-lg gravity-reactive"><i class="bi bi-magic me-2"></i> Explore the Magic</button>
+                <button class="btn btn-outline-primary btn-lg gravity-reactive ms-3"><i class="bi bi-book me-2"></i> Style Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-container">
+        <div class="container">
+            <h2 class="section-title">Buttons Showcase</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="glass-container gravity-reactive">
+                        <p><strong>Primary Buttons:</strong></p>
+                        <button type="button" class="btn btn-primary gravity-reactive"><i class="bi bi-check-circle-fill me-1"></i> Primary</button>
+                        <button type="button" class="btn btn-primary btn-lg gravity-reactive"><i class="bi bi-star-fill me-1"></i> Primary Large</button>
+                        <button type="button" class="btn btn-primary btn-sm gravity-reactive"><i class="bi bi-arrow-down-short me-1"></i> Primary Small</button>
+                        <button type="button" class="btn btn-primary" disabled><i class="bi bi-x-circle-fill me-1"></i> Disabled</button>
+                        <br><br>
+                        <p><strong>Secondary Buttons:</strong></p>
+                        <button type="button" class="btn btn-secondary gravity-reactive"><i class="bi bi-layers-fill me-1"></i> Secondary</button>
+                        <button type="button" class="btn btn-secondary btn-lg gravity-reactive"><i class="bi bi-box-seam-fill me-1"></i> Secondary Large</button>
+                        <button type="button" class="btn btn-secondary btn-sm gravity-reactive"><i class="bi bi-tag-fill me-1"></i> Secondary Small</button>
+                        <br><br>
+                        <p><strong>Outline Buttons:</strong></p>
+                        <button type="button" class="btn btn-outline-primary gravity-reactive"><i class="bi bi-heart-fill me-1"></i> Outline Primary</button>
+                        <button type="button" class="btn btn-outline-secondary gravity-reactive"><i class="bi bi-bookmark-fill me-1"></i> Outline Secondary</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-container">
+        <div class="container">
+            <h2 class="section-title">Form Elements</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="glass-container gravity-reactive">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control form-control-glass gravity-reactive" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlSelect1" class="form-label">Select Example</label>
+                                <select class="form-select form-control-glass gravity-reactive" id="exampleFormControlSelect1">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example Textarea</label>
+                                <textarea class="form-control form-control-glass gravity-reactive" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input gravity-reactive" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input gravity-reactive" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Default radio
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary gravity-reactive"><i class="bi bi-send-fill me-2"></i> Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-container">
+        <div class="container">
+            <h2 class="section-title">Cards & Features</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card glass-container gravity-reactive card-feature">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <h5 class="card-title">Fast & Performant</h5>
+                        <p class="card-text">Optimized CSS and subtle animations ensure a smooth and responsive user experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card glass-container gravity-reactive card-feature">
+                        <i class="bi bi-brush-fill"></i>
+                        <h5 class="card-title">Aesthetically Pleasing</h5>
+                        <p class="card-text">Beautifully designed glassmorphic elements with a focus on visual harmony and elegance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card glass-container gravity-reactive card-feature">
+                        <i class="bi bi-gear-fill"></i>
+                        <h5 class="card-title">Highly Customizable</h5>
+                        <p class="card-text">Easily adapt and extend the style guide to fit your brand and project requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-container">
+        <div class="container">
+            <h2 class="section-title">Alerts</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-primary glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-info-circle-fill me-2"></i> A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i> A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-x-octagon-fill me-2"></i> A simple danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-exclamation-circle-fill me-2"></i> A simple warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info glass-container gravity-reactive" role="alert">
+                        <i class="bi bi-info-square-fill me-2"></i> A simple info alert—check it out!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-container">
+        <div class="container">
+            <h2 class="section-title">Modal Example</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-primary btn-lg gravity-reactive" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-window-stack me-2"></i> Launch Demo Modal
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content glass-container gravity-reactive">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-window me-2"></i> Gravity Glass Modal</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a demo modal showcasing the Gravity Glass UI style. You can see the glassmorphic effect applied to the modal content, header, and footer. It maintains the clean and elegant aesthetic of the theme.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item glass-container gravity-reactive">First item</li>
+                                <li class="list-group-item glass-container gravity-reactive">Second item</li>
+                                <li class="list-group-item glass-container gravity-reactive">Third item</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary gravity-reactive" data-bs-dismiss="modal"><i class="bi bi-x-lg me-2"></i> Close</button>
+                            <button type="button" class="btn btn-primary gravity-reactive"><i class="bi bi-check-lg me-2"></i> Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-glass-5">
+        <div class="container">
+            <p>© 2024 Gravity Glass UI. Crafted with Bootstrap 5.3 and <i class="bi bi-heart-fill text-danger"></i></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const glassElements = document.querySelectorAll('.gravity-reactive');
+            glassElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                const deltaX = mouseX - centerX;
+                const deltaY = mouseY - centerY;
+
+                const tiltX = (deltaY / rect.height) * 5;
+                const tiltY = (deltaX / rect.width) * 5;
+
+                element.style.transform = `perspective(500px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+                element.style.boxShadow = `0 ${Math.abs(tiltX) + Math.abs(tiltY) * 2}px ${Math.abs(tiltX) + Math.abs(tiltY) * 4}px rgba(0, 0, 0, 0.15)`;
+            });
+        });
+
+        document.addEventListener('mouseout', () => {
+            const glassElements = document.querySelectorAll('.gravity-reactive');
+            glassElements.forEach(element => {
+                element.style.transform = `perspective(500px) rotateX(0deg) rotateY(0deg) scale(1)`;
+                element.style.boxShadow = `0 10px 40px 0 rgba(0, 0, 0, 0.15)`;
+            });
+        });
+    </script>
+</body>
+
+</html>

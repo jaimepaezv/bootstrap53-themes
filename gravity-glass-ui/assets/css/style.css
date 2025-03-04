@@ -1,0 +1,551 @@
+/* ==========================================================
+   Gravity Glass UI - Bootstrap 5.3 Theme
+   ========================================================= */
+
+/* Import Google Font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* ==========================================================
+   Global Styles & Typography
+   ========================================================= */
+
+:root {
+    --gravity-glass-primary-accent: #A0E9FF;
+    --gravity-glass-secondary-accent: #64B5F6;
+    --gravity-glass-light-bg: #F0F2F5;
+    --gravity-glass-dark-bg: #1E1E1E;
+    --gravity-glass-light-text: #333333;
+    --gravity-glass-dark-text: #EEEEEE;
+    --gravity-glass-shadow: rgba(0, 0, 0, 0.15);
+    --gravity-glass-accent-shadow: rgba(160, 233, 255, 0.2);
+    /* rgba(var(--gravity-glass-primary-accent-rgb), 0.2); - if you define rgb vars */
+    --gravity-glass-border-radius: 0.5rem;
+    --gravity-glass-transition-duration: 0.3s;
+    --gravity-glass-font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--gravity-glass-font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--gravity-glass-light-text);
+    /* Default light mode text */
+    background-color: var(--gravity-glass-light-bg);
+    /* Default light mode background */
+}
+
+/* Dark Mode Overrides (Example - Apply .dark-mode class to body) */
+body.dark-mode {
+    color: var(--gravity-glass-dark-text);
+    background-color: var(--gravity-glass-dark-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 600;
+    /* Semibold headings */
+    color: inherit;
+    /* Inherit text color from body/parent */
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 400;
+    /* Regular body text */
+}
+
+a {
+    color: var(--gravity-glass-primary-accent);
+    text-decoration: none;
+    transition: color var(--gravity-glass-transition-duration);
+}
+
+a:hover,
+a:focus {
+    color: var(--gravity-glass-secondary-accent);
+    text-decoration: none;
+    /* Keep no underline on hover */
+}
+
+/* ==========================================================
+   Glass Container - Reusable Class
+   ========================================================= */
+.glass-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Slightly less intense white glass base */
+    backdrop-filter: blur(12px);
+    /* Stronger blur for more pronounced glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* Slightly less intense white border */
+    border-radius: var(--gravity-glass-border-radius);
+    box-shadow: 0 10px 40px 0 var(--gravity-glass-shadow);
+    /* Deeper shadow for more depth */
+    padding: 2.5rem;
+    /* Increased padding for spaciousness */
+    transition: all var(--gravity-glass-transition-duration) ease-in-out;
+}
+
+.glass-container:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    /* Brighter hover */
+    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.2);
+    /* Increased shadow on hover */
+    transform: translateY(-5px);
+    /* More pronounced lift on hover */
+}
+
+/* Dark Mode Glass Container */
+body.dark-mode .glass-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Dark glass base for dark mode */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Dark glass border for dark mode */
+    box-shadow: 0 10px 40px 0 rgba(255, 255, 255, 0.05);
+    /* Subtle white shadow in dark mode */
+}
+
+body.dark-mode .glass-container:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 60px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+/* ==========================================================
+   Buttons - .btn-glass and Bootstrap Button Overrides
+   ========================================================= */
+.btn {
+    border: none;
+    /* Remove default Bootstrap borders */
+    padding: 0.8rem 1.75rem;
+    /* Adjusted padding */
+    border-radius: var(--gravity-glass-border-radius);
+    font-weight: 500;
+    /* Medium font weight for buttons */
+    transition: all var(--gravity-glass-transition-duration) ease-in-out;
+    box-shadow: 0 4px 12px 0 var(--gravity-glass-shadow);
+    /* Default button shadow */
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2);
+    /* Increased shadow on hover/focus */
+    transform: scale(1.03);
+    /* Subtle scale on hover */
+}
+
+.btn:active {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    /* Reduced shadow on active */
+    transform: scale(0.98);
+    /* Subtle scale down on active */
+}
+
+
+/* Primary Button Override */
+.btn-primary {
+    background-color: rgba(var(--gravity-glass-primary-accent), 0.4);
+    /* Primary accent glass base */
+    color: #fff;
+    border: 1px solid rgba(var(--gravity-glass-primary-accent), 0.6);
+    box-shadow: 0 4px 12px 0 var(--gravity-glass-accent-shadow);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: rgba(var(--gravity-glass-primary-accent), 0.6);
+    border-color: rgba(var(--gravity-glass-primary-accent), 0.8);
+    box-shadow: 0 6px 18px 0 rgba(var(--gravity-glass-primary-accent), 0.3);
+    color: #fff;
+    /* Keep text white on hover */
+}
+
+.btn-primary:active {
+    background-color: rgba(var(--gravity-glass-primary-accent), 0.7);
+    box-shadow: 0 2px 6px 0 rgba(var(--gravity-glass-primary-accent), 0.4);
+    color: #fff;
+}
+
+/* Secondary Button Override (Example - Customize as needed) */
+.btn-secondary {
+    background-color: rgba(var(--gravity-glass-secondary-accent), 0.3);
+    /* Secondary accent glass base */
+    color: #fff;
+    border: 1px solid rgba(var(--gravity-glass-secondary-accent), 0.5);
+    box-shadow: 0 4px 12px 0 rgba(var(--gravity-glass-secondary-accent), 0.15);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: rgba(var(--gravity-glass-secondary-accent), 0.5);
+    border-color: rgba(var(--gravity-glass-secondary-accent), 0.7);
+    box-shadow: 0 6px 18px 0 rgba(var(--gravity-glass-secondary-accent), 0.25);
+    color: #fff;
+}
+
+.btn-secondary:active {
+    background-color: rgba(var(--gravity-glass-secondary-accent), 0.6);
+    box-shadow: 0 2px 6px 0 rgba(var(--gravity-glass-secondary-accent), 0.3);
+    color: #fff;
+}
+
+/* Outline Buttons (Example - Customize as needed) */
+.btn-outline-primary,
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* White outline */
+    color: #fff;
+}
+
+.btn-outline-primary {
+    border-color: rgba(var(--gravity-glass-primary-accent), 0.7);
+    color: rgba(var(--gravity-glass-primary-accent), 0.9);
+}
+
+.btn-outline-secondary {
+    border-color: rgba(var(--gravity-glass-secondary-accent), 0.7);
+    color: rgba(var(--gravity-glass-secondary-accent), 0.9);
+}
+
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle white fill on hover */
+    color: #fff;
+    /* Keep text white */
+    box-shadow: 0 4px 12px 0 var(--gravity-glass-shadow);
+    /* Add subtle shadow on hover for outline buttons */
+}
+
+.btn-outline-primary:active,
+.btn-outline-secondary:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly darker fill on active */
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    /* Reduced shadow on active */
+}
+
+
+/* Dark Mode Button Overrides */
+body.dark-mode .btn {
+    box-shadow: 0 4px 12px 0 rgba(255, 255, 255, 0.05);
+    /* Subtle white shadow in dark mode buttons */
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode .btn:focus {
+    box-shadow: 0 6px 18px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn:active {
+    box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .btn-primary {
+    box-shadow: 0 4px 12px 0 rgba(var(--gravity-glass-primary-accent), 0.1);
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-primary:focus {
+    box-shadow: 0 6px 18px 0 rgba(var(--gravity-glass-primary-accent), 0.15);
+}
+
+body.dark-mode .btn-primary:active {
+    box-shadow: 0 2px 6px 0 rgba(var(--gravity-glass-primary-accent), 0.2);
+}
+
+body.dark-mode .btn-secondary {
+    box-shadow: 0 4px 12px 0 rgba(var(--gravity-glass-secondary-accent), 0.08);
+}
+
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .btn-secondary:focus {
+    box-shadow: 0 6px 18px 0 rgba(var(--gravity-glass-secondary-accent), 0.12);
+}
+
+body.dark-mode .btn-secondary:active {
+    box-shadow: 0 2px 6px 0 rgba(var(--gravity-glass-secondary-accent), 0.16);
+}
+
+body.dark-mode .btn-outline-primary,
+body.dark-mode .btn-outline-secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    /* Less intense white outline in dark mode */
+    color: rgba(255, 255, 255, 0.7);
+    /* Less intense white text in dark mode */
+}
+
+body.dark-mode .btn-outline-primary {
+    border-color: rgba(var(--gravity-glass-primary-accent), 0.5);
+    color: rgba(var(--gravity-glass-primary-accent), 0.7);
+}
+
+body.dark-mode .btn-outline-secondary {
+    border-color: rgba(var(--gravity-glass-secondary-accent), 0.5);
+    color: rgba(var(--gravity-glass-secondary-accent), 0.7);
+}
+
+body.dark-mode .btn-outline-primary:hover,
+body.dark-mode .btn-outline-primary:focus,
+body.dark-mode .btn-outline-secondary:hover,
+body.dark-mode .btn-outline-secondary:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Subtle white fill on hover in dark mode */
+}
+
+/* ==========================================================
+   Form Controls - .form-control-glass and Bootstrap Overrides
+   ========================================================= */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Very subtle white glass base for inputs */
+    backdrop-filter: blur(8px);
+    /* Slightly stronger blur for inputs */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Very subtle white border */
+    color: var(--gravity-glass-light-text);
+    /* Input text color */
+    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+    /* Subtle inner shadow for input depth */
+    border-radius: var(--gravity-glass-border-radius);
+    padding: 0.75rem 1rem;
+    /* Adjusted input padding */
+    transition: border-color var(--gravity-glass-transition-duration), box-shadow var(--gravity-glass-transition-duration);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    /* Placeholder text color */
+    opacity: 1;
+    /* Override Firefox opacity bug */
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Slightly brighter focus state */
+    border-color: rgba(var(--gravity-glass-primary-accent), 0.6);
+    /* Accent color border on focus */
+    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.05), 0 0 0 0.2rem rgba(var(--gravity-glass-primary-accent), 0.2);
+    /* Focus ring with accent color */
+    outline: 0;
+    /* Remove default focus outline */
+    color: var(--gravity-glass-light-text);
+    /* Ensure text color on focus */
+}
+
+/* Dark Mode Form Control Overrides */
+body.dark-mode .form-control {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Dark glass input base for dark mode */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* Dark glass input border for dark mode */
+    color: var(--gravity-glass-dark-text);
+    /* Dark mode input text color */
+    box-shadow: inset 0 2px 6px 0 rgba(255, 255, 255, 0.03);
+    /* Subtle white inner shadow in dark mode inputs */
+}
+
+body.dark-mode .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    /* Dark mode placeholder text color */
+}
+
+body.dark-mode .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Slightly brighter focus state in dark mode */
+    color: var(--gravity-glass-dark-text);
+    /* Ensure text color on focus in dark mode */
+    box-shadow: inset 0 2px 6px 0 rgba(255, 255, 255, 0.03), 0 0 0 0.2rem rgba(var(--gravity-glass-primary-accent), 0.2);
+    /* Focus ring same in dark mode */
+}
+
+
+/* ==========================================================
+   Navbar - .navbar-glass and Bootstrap Navbar Overrides
+   ========================================================= */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-glass {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Subtle white glass navbar */
+    backdrop-filter: blur(15px);
+    /* Stronger blur for navbar */
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle bottom border */
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+    /* Subtle navbar shadow */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fff;
+    /* White navbar text and links */
+    font-weight: 500;
+    transition: color var(--gravity-glass-transition-duration);
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--gravity-glass-primary-accent);
+    /* Accent color on hover/focus */
+}
+
+
+/* Dark Mode Navbar Overrides */
+body.dark-mode .navbar-glass {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Dark glass navbar for dark mode */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    /* Dark glass navbar border for dark mode */
+    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.03);
+    /* Subtle white shadow in dark mode navbar */
+}
+
+/* ==========================================================
+   Card - Bootstrap Card Overrides (using .glass-container)
+   ========================================================= */
+.card {
+    background-color: transparent;
+    /* Card background transparent to let glass container show through */
+    border: none;
+    /* Remove default card border */
+}
+
+.card-body {
+    padding: 2rem;
+    /* Adjust card body padding */
+}
+
+/* Apply .glass-container to .card or .card-body as needed in HTML */
+/* Example: <div class="card glass-container"> ... </div> */
+
+
+/* ==========================================================
+   Modal - Bootstrap Modal Overrides (using .glass-container)
+   ========================================================= */
+.modal-content {
+    background-color: transparent;
+    /* Modal content transparent */
+    border: none;
+    /* Remove default modal border */
+}
+
+/* Apply .glass-container to .modal-content in HTML */
+/* Example: <div class="modal-content glass-container"> ... </div> */
+.modal-header,
+.modal-footer {
+    border: none;
+    /* Remove modal header/footer borders */
+    background-color: transparent;
+    /* Header/Footer transparent background */
+}
+
+.modal-title {
+    color: #fff;
+    /* Modal title color */
+}
+
+/* ==========================================================
+   Alert - Bootstrap Alert Overrides (using .glass-container)
+   ========================================================= */
+.alert {
+    background-color: transparent;
+    /* Alert background transparent */
+    border: none;
+    /* Remove default alert border */
+    color: #fff;
+    /* Default alert text color */
+}
+
+/* Apply .glass-container to .alert in HTML */
+/* Example: <div class="alert glass-container"> ... </div> */
+
+.alert-primary {
+    /* Example - Customize alert colors if needed */
+    color: var(--gravity-glass-primary-accent);
+}
+
+
+/* ==========================================================
+   Animations - Subtle Fluctuations (Optional - Add .animate-fluctuation class)
+   ========================================================= */
+@keyframes subtle-fluctuation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1px);
+    }
+
+    /* Very slight vertical movement */
+}
+
+.animate-fluctuation {
+    animation: subtle-fluctuation 4s infinite ease-in-out;
+    /* Apply to glass elements */
+}
+
+
+/* ==========================================================
+   Utility Classes - Spacing adjustments (Example)
+   ========================================================= */
+.mt-glass-5 {
+    margin-top: 5rem !important;
+}
+
+/* Example - Adjust spacing utilities as needed */
+.mb-glass-5 {
+    margin-bottom: 5rem !important;
+}
+
+.pt-glass-5 {
+    padding-top: 5rem !important;
+}
+
+.pb-glass-5 {
+    padding-bottom: 5rem !important;
+}
+
+
+/* ==========================================================
+   Accessibility - Ensure Contrast (Implicitly handled by color choices, but verify)
+   ========================================================= */
+/*  Use color contrast checkers to ensure sufficient contrast  */
+/*  For example, text on glass backgrounds should have adequate contrast  */
+
+
+/* ==========================================================
+   Cursor Interaction - (JavaScript needed for dynamic gravity effect - CSS just for base styles)
+   ========================================================= */
+/* Add .gravity-reactive class in HTML for JavaScript interaction */
+/* JavaScript code (separate .js file) is needed to implement the cursor-driven gravity effect */
+
+
+/* ==========================================================
+   End of Gravity Glass UI Theme - Bootstrap 5.3 Override CSS
+   ========================================================= */

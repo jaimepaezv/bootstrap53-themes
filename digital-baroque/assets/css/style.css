@@ -1,0 +1,737 @@
+/* Digital Baroque Theme - Bootstrap 5.3 Override */
+
+/* -------------------------------------------------- */
+/* Google Fonts Import */
+/* -------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&display=swap');
+
+/* -------------------------------------------------- */
+/* Color Variables */
+/* -------------------------------------------------- */
+
+:root {
+    --baroque-ebony: #120A07;
+    --baroque-charcoal: #1E1E1E;
+    --baroque-dark-slate-gray: #282828;
+    --baroque-dark-goldenrod: #B8860B;
+    --baroque-bronze: #CD7F32;
+    --baroque-gold: #D4AF37;
+    --baroque-emerald-green: #2E8B57;
+    --baroque-sapphire-blue: #0F52BA;
+    --baroque-ruby-red: #B22222;
+    --baroque-amethyst-purple: #9966CC;
+    --baroque-light-gray: #F0F0F0;
+    --baroque-gainsboro: #E8E8E8;
+
+    --bs-primary: var(--baroque-dark-goldenrod);
+    --bs-secondary: var(--baroque-emerald-green);
+    --bs-success: var(--baroque-emerald-green);
+    --bs-info: var(--baroque-sapphire-blue);
+    --bs-warning: var(--baroque-gold);
+    --bs-danger: var(--baroque-ruby-red);
+    --bs-light: var(--baroque-light-gray);
+    --bs-dark: var(--baroque-ebony);
+    --bs-body-bg: var(--baroque-charcoal);
+    --bs-body-color: var(--baroque-light-gray);
+    --bs-link-color: var(--bs-primary);
+    --bs-link-hover-color: color-mix(in srgb, var(--bs-primary) 80%, white);
+    --bs-heading-color: var(--bs-light);
+
+    --metallic-gradient: linear-gradient(135deg, var(--baroque-dark-slate-gray) 0%, #404040 50%, var(--baroque-dark-slate-gray) 100%);
+}
+
+/* -------------------------------------------------- */
+/* Typography Overrides */
+/* -------------------------------------------------- */
+
+body {
+    font-family: 'Merriweather', serif;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--bs-heading-color);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+}
+
+a {
+    color: var(--bs-link-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--bs-link-hover-color);
+    text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* General Element Overrides */
+/* -------------------------------------------------- */
+
+hr {
+    border-top-color: var(--baroque-gainsboro);
+    opacity: 0.5;
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--bs-primary) 50%, black);
+    color: var(--bs-light-gray);
+}
+
+/* -------------------------------------------------- */
+/* Button Overrides */
+/* -------------------------------------------------- */
+
+.btn {
+    border: 1px solid var(--bs-light);
+    color: var(--bs-light);
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out, background-image 0.2s ease-in-out;
+    background-color: transparent;
+    background-image: var(--metallic-gradient);
+    background-size: 150% 150%;
+    /* For hover animation */
+    background-position: 100% 0;
+    /* Start off-screen */
+    border-radius: 0.375rem;
+    /* Default Bootstrap radius */
+}
+
+.btn:hover {
+    color: var(--bs-light);
+    border-color: var(--bs-primary);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 2px 3px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+    background-position: 0 0;
+    /* Animate to on-screen */
+    background-image: var(--metallic-gradient);
+    /* Ensure gradient on hover */
+}
+
+.btn:active,
+.btn.active {
+    color: var(--bs-light);
+    background-color: color-mix(in srgb, var(--bs-dark-slate-gray) 70%, black);
+    border-color: var(--bs-primary);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+}
+
+.btn:focus,
+.btn.focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), .5);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: color-mix(in srgb, var(--bs-primary) 80%, white);
+    border-color: color-mix(in srgb, var(--bs-primary) 80%, white);
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.btn-secondary:active,
+.btn-secondary.active,
+.btn-success:active,
+.btn-success.active,
+.btn-danger:active,
+.btn-danger.active,
+.btn-warning:active,
+.btn-warning.active,
+.btn-info:active,
+.btn-info.active,
+.btn-dark:active,
+.btn-dark.active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+}
+
+.btn-outline-light {
+    border-color: var(--bs-light);
+    color: var(--bs-light);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+}
+
+/* -------------------------------------------------- */
+/* Form Overrides */
+/* -------------------------------------------------- */
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bs-light);
+    color: var(--bs-light);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-radius: 0.375rem;
+    /* Default Bootstrap radius */
+}
+
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-select {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bs-light);
+    color: var(--bs-light);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8f9fa' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    /* Light dropdown arrow */
+}
+
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.form-check-input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bs-light);
+}
+
+.form-check-input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darken on focus */
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.form-range {
+    background-color: transparent;
+    /* Remove default background */
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: var(--bs-primary);
+    border: 2px solid var(--bs-light);
+}
+
+.form-range::-moz-range-thumb {
+    background-color: var(--bs-primary);
+    border: 2px solid var(--bs-light);
+}
+
+.form-range::-ms-thumb {
+    background-color: var(--bs-primary);
+    border: 2px solid var(--bs-light);
+}
+
+.form-label {
+    color: var(--bs-light);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-group-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--bs-light);
+    border: 1px solid var(--bs-light);
+}
+
+/* -------------------------------------------------- */
+/* Navbar Overrides */
+/* -------------------------------------------------- */
+
+.navbar {
+    background-color: var(--baroque-dark-slate-gray);
+    border-bottom: 1px solid var(--bs-light);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+    color: var(--bs-light);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--bs-primary);
+}
+
+.navbar-nav .nav-link {
+    color: var(--bs-light);
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--bs-primary);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--bs-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 0.375rem;
+    /* Default Bootstrap radius */
+}
+
+.dropdown-item {
+    color: var(--bs-light);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--bs-primary);
+}
+
+.dropdown-divider {
+    border-top-color: var(--bs-gainsboro);
+    opacity: 0.2;
+}
+
+.navbar-toggler {
+    border-color: var(--bs-light);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28248, 249, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Light toggler icon */
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    border-color: var(--bs-primary);
+}
+
+/* -------------------------------------------------- */
+/* Card Overrides */
+/* -------------------------------------------------- */
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--bs-light);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0.5rem;
+    /* Slightly more rounded cards */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--bs-light);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--bs-light);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+    /* Rounded top corners */
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid var(--bs-light);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 0.4rem 0.4rem;
+    /* Rounded bottom corners */
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--bs-light);
+    margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+    color: var(--bs-gainsboro);
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--bs-body-color);
+    /* Inherits from body, but explicit for clarity */
+}
+
+/* -------------------------------------------------- */
+/* Modal Overrides */
+/* -------------------------------------------------- */
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--bs-light);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    /* Slightly more rounded modal */
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--bs-light);
+}
+
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--bs-light);
+}
+
+.modal-body {
+    color: var(--bs-body-color);
+    /* Inherits from body, but explicit for clarity */
+}
+
+.modal-footer {
+    border-top: 1px solid var(--bs-light);
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Darker modal backdrop */
+    opacity: 0.8;
+    /* Slightly more opaque backdrop */
+}
+
+.modal-dialog {
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.modal.fade .modal-dialog {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* -------------------------------------------------- */
+/* List Group Overrides */
+/* -------------------------------------------------- */
+.list-group-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--bs-light);
+    color: var(--bs-light);
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--bs-primary);
+}
+
+.list-group-item.active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-light-gray);
+}
+
+/* -------------------------------------------------- */
+/* Accordion Overrides */
+/* -------------------------------------------------- */
+.accordion-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--bs-light);
+    border: 1px solid var(--bs-light);
+    box-shadow: none;
+    /* Remove default shadow */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Darken when expanded */
+    color: var(--bs-primary);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+    /* Default accordion shadow, but adjust if needed */
+}
+
+.accordion-button:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+
+.accordion-body {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--bs-light);
+    padding: 1rem 1.25rem;
+}
+
+.accordion-item {
+    background-color: transparent;
+    /* Item background is handled by button and body */
+    border: none;
+    /* Remove default border */
+    border-bottom: 1px solid var(--bs-light);
+    /* Add bottom border for separation */
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom: none;
+    /* Remove bottom border for last item to avoid double border */
+}
+
+.accordion-item:not(:first-of-type) {
+    border-top: none;
+    /* Remove top border for items after the first */
+}
+
+/* -------------------------------------------------- */
+/* Tooltip Overrides */
+/* -------------------------------------------------- */
+
+.tooltip-inner {
+    background-color: var(--baroque-dark-slate-gray);
+    color: var(--bs-light);
+    border: 1px solid var(--bs-light);
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: var(--baroque-dark-slate-gray);
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: var(--baroque-dark-slate-gray);
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: var(--baroque-dark-slate-gray);
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: var(--baroque-dark-slate-gray);
+}
+
+/* -------------------------------------------------- */
+/* Popover Overrides */
+/* -------------------------------------------------- */
+
+.popover {
+    background-color: var(--baroque-dark-slate-gray);
+    border: 1px solid var(--bs-light);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.popover-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--bs-light);
+    border-bottom: 1px solid var(--bs-light);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.popover-body {
+    color: var(--bs-light);
+}
+
+.popover-arrow::after,
+.popover-arrow::before {
+    border-color: transparent;
+    /* Ensure arrow is transparent */
+}
+
+.popover-arrow::after {
+    border-color: transparent transparent var(--baroque-dark-slate-gray) transparent;
+    /* Set arrow color */
+}
+
+.popover.bs-popover-top>.popover-arrow::after {
+    border-color: var(--baroque-dark-slate-gray) transparent transparent transparent;
+}
+
+.popover.bs-popover-end>.popover-arrow::after {
+    border-color: transparent var(--baroque-dark-slate-gray) transparent transparent;
+}
+
+.popover.bs-popover-bottom>.popover-arrow::after {
+    border-color: transparent transparent transparent var(--baroque-dark-slate-gray);
+}
+
+.popover.bs-popover-start>.popover-arrow::after {
+    border-color: transparent transparent transparent var(--baroque-dark-slate-gray);
+    /* Duplicate for start just in case */
+}
+
+/* -------------------------------------------------- */
+/* Progress Bar Overrides */
+/* -------------------------------------------------- */
+
+.progress {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.375rem;
+    overflow: hidden;
+    /* To properly round the progress bar */
+}
+
+.progress-bar {
+    background-image: var(--metallic-gradient);
+    /* Use metallic gradient for progress bar */
+    background-size: 200% 100%;
+    /* For animation */
+    animation: progress-bar-stripes 2s linear infinite, metallic-shine 3s linear infinite alternate;
+    /* Add metallic shine animation */
+    color: var(--bs-light);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* Add subtle text shadow for readability on gradient */
+}
+
+@keyframes metallic-shine {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* -------------------------------------------------- */
+/* Badge Overrides */
+/* -------------------------------------------------- */
+.badge {
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    border-radius: 0.25rem;
+    padding: 0.4em 0.6em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* Subtle text shadow for badges */
+}
+
+.badge-primary {
+    background-color: var(--bs-primary);
+}
+
+.badge-secondary {
+    background-color: var(--bs-secondary);
+}
+
+.badge-success {
+    background-color: var(--bs-success);
+}
+
+.badge-danger {
+    background-color: var(--bs-danger);
+}
+
+.badge-warning {
+    background-color: var(--bs-warning);
+}
+
+.badge-info {
+    background-color: var(--bs-info);
+}
+
+.badge-light {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+}
+
+.badge-dark {
+    background-color: var(--bs-dark);
+}
+
+/* -------------------------------------------------- */
+/* Close Button Override */
+/* -------------------------------------------------- */
+.btn-close {
+    background-image: var(--bs-close-image);
+    filter: invert(1) grayscale(100%) brightness(200%);
+    /* Invert and brighten close icon for dark background */
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    filter: invert(0.8) grayscale(80%) brightness(150%);
+    /* Slightly adjust hover/focus */
+}
+
+/* -------------------------------------------------- */
+/* Example Custom Utilities (Optional) */
+/* -------------------------------------------------- */
+
+.bg-baroque-metallic {
+    background-image: var(--metallic-gradient);
+}
+
+.text-baroque-gold {
+    color: var(--baroque-gold);
+}
+
+.border-baroque-light {
+    border-color: var(--baroque-light-gray) !important;
+}

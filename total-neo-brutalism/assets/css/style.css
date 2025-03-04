@@ -1,0 +1,566 @@
+/* Groteske Neo-Brutalism Bootstrap 5.3 Override CSS - Enhanced Brutalist Version */
+
+/* ==========================================================================
+   Google Font Import (IBM Plex Mono - More Brutalist Font)
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+   
+   /* Alternative interpretation */
+   /*
+   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    */
+
+   /* ==========================================================================
+      General Styles & Resets
+      ========================================================================== */
+   
+   :root {
+       --bs-font-sans-serif: 'IBM Plex Mono', monospace; /* IBM Plex Mono for a stronger Brutalist feel */
+       /*--bs-font-sans-serif: 'Space Grotesk', monospace;*/
+       --bs-body-font-family: var(--bs-font-sans-serif);
+       --bs-heading-font-family: var(--bs-font-sans-serif);
+       --bs-body-color: #000; /* Black text */
+       --bs-body-bg: #f0f0f0; /* Slightly darker off-white background for contrast */
+       --bs-link-color: #000; /* Black links */
+       --bs-link-hover-color: #000; /* Black link hover */
+       --bs-primary: #000; /* Primary color - Black */
+       --bs-secondary: #6c757d; /* Secondary color - Gray (Bootstrap default) */
+       --bs-success: #198754; /* Success color - Green (Bootstrap default) */
+       --bs-info: #0dcaf0;    /* Info color - Cyan (Bootstrap default) */
+       --bs-warning: #ffc107;  /* Warning color - Yellow (Bootstrap default) */
+       --bs-danger: #dc3545;   /* Danger color - Red (Bootstrap default) */
+       --bs-light: #f8f9fa;    /* Light color - Light gray (Bootstrap default) */
+       --bs-dark: #212529;     /* Dark color - Dark gray (Bootstrap default) */
+       --bs-border-color: #000; /* Black border color */
+   
+       /* Neo-Brutalist Shadow Variable */
+       --neo-brutalist-shadow: 4px 4px 0 #000; /* Solid, offset black shadow */
+   }
+   
+   body {
+       font-family: var(--bs-body-font-family);
+       color: var(--bs-body-color);
+       background-color: var(--bs-body-bg);
+       line-height: 1.4; /* Slightly tighter line height for monospace font */
+   }
+   
+   h1, h2, h3, h4, h5, h6 {
+       font-family: var(--bs-heading-font-family);
+       font-weight: 700; /* Bold headings */
+       margin-top: 0;
+       margin-bottom: 0.5rem;
+       line-height: 1.1; /* Tighter line height for headings */
+       letter-spacing: -0.02em; /* Slightly reduce letter spacing for a denser look */
+   }
+   
+   p {
+       margin-top: 0;
+       margin-bottom: 1rem;
+   }
+   
+   a {
+       color: var(--bs-link-color);
+       text-decoration: none; /* No underlines */
+       font-weight: bold; /* Bold links */
+   }
+   
+   a:hover,
+   a:focus {
+       color: var(--bs-link-hover-color);
+       text-decoration: underline; /* Underline on hover/focus for clarity if needed */
+   }
+   
+   hr {
+       border-top: 2px solid var(--bs-border-color);
+       border-width: 2px 0 0; /* Thicker hr */
+       opacity: 1; /* Ensure full opacity */
+   }
+   
+   /* ==========================================================================
+      Typography
+      ========================================================================== */
+   
+   /* No specific typography overrides beyond general and font-family set in :root */
+   
+   /* ==========================================================================
+      Layout & Grid
+      ========================================================================== */
+   
+   /* Container - No specific overrides, Bootstrap defaults are generally fine for structure */
+   
+   /* Grid system - Bootstrap defaults are generally fine for structure */
+   
+   /* ==========================================================================
+      Components - Core Brutalist Overrides
+      ========================================================================== */
+   
+   /* Buttons */
+   .btn {
+       border-radius: 0; /* Square buttons */
+       border: 2px solid var(--bs-border-color); /* Thick border */
+       padding: 0.75rem 1.5rem; /* Increased padding */
+       font-weight: bold;
+       text-transform: uppercase; /* Uppercase buttons */
+       transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+   }
+   
+   .btn:active {
+       box-shadow: none; /* Remove shadow on active state for a 'pressed' effect */
+       transform: translate(2px, 2px); /* Slightly move button down and right on active */
+   }
+   
+   .btn-primary {
+       background-color: transparent; /* Transparent background for primary */
+       color: var(--bs-primary);
+       border-color: var(--bs-primary);
+   }
+   
+   .btn-primary:hover,
+   .btn-primary:focus,
+   .btn-primary:active,
+   .btn-primary.active,
+   .show > .btn-primary.dropdown-toggle {
+       background-color: var(--bs-primary); /* Solid background on hover/focus/active */
+       color: #fff; /* White text on hover/focus/active */
+       border-color: var(--bs-primary);
+   }
+   
+   .btn-secondary {
+       background-color: transparent;
+       color: var(--bs-secondary);
+       border-color: var(--bs-secondary);
+   }
+   
+   .btn-secondary:hover,
+   .btn-secondary:focus,
+   .btn-secondary:active,
+   .btn-secondary.active,
+   .show > .btn-secondary.dropdown-toggle {
+       background-color: var(--bs-secondary);
+       color: #fff;
+       border-color: var(--bs-secondary);
+   }
+   
+   .btn-outline-primary {
+       border-color: var(--bs-primary);
+       color: var(--bs-primary);
+       background-color: transparent;
+   }
+   
+   .btn-outline-primary:hover,
+   .btn-outline-primary:focus,
+   .btn-outline-primary:active,
+   .btn-outline-primary.active,
+   .show > .btn-outline-primary.dropdown-toggle {
+       background-color: var(--bs-primary);
+       color: #fff;
+       border-color: var(--bs-primary);
+   }
+   
+   .btn-outline-secondary {
+       border-color: var(--bs-secondary);
+       color: var(--bs-secondary);
+       background-color: transparent;
+   }
+   
+   .btn-outline-secondary:hover,
+   .btn-outline-secondary:focus,
+   .btn-outline-secondary:active,
+   .btn-outline-secondary.active,
+   .show > .btn-outline-secondary.dropdown-toggle {
+       background-color: var(--bs-secondary);
+       color: #fff;
+       border-color: var(--bs-secondary);
+   }
+   
+   /* Navbar */
+   .navbar {
+       border-bottom: 2px solid var(--bs-border-color); /* Border below navbar */
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+   }
+   
+   .navbar-brand {
+       font-weight: bold;
+       font-size: 1.5rem;
+   }
+   
+   .navbar-nav .nav-link {
+       padding-right: 1rem;
+       padding-left: 1rem;
+       font-weight: bold;
+       text-transform: uppercase;
+   }
+   
+   .navbar-nav .nav-link:hover,
+   .navbar-nav .nav-link:focus {
+       text-decoration: underline; /* Underline navbar links on hover/focus */
+   }
+   
+   .navbar-toggler {
+       border: 2px solid var(--bs-border-color);
+       border-radius: 0;
+   }
+   
+   /* Cards */
+   .card {
+       border: 2px solid var(--bs-border-color); /* Thick card border */
+       border-radius: 0; /* Square cards */
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+       background-color: #fff; /* White card background */
+       transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out; /* Transition for shadow and transform */
+   }
+   
+   .card:hover, .card:focus {
+       box-shadow: var(--neo-brutalist-shadow); /* Keep shadow on hover/focus */
+       transform: translate(-2px, -2px); /* Slightly move card up and left on hover/focus */
+   }
+   .card:active {
+       box-shadow: none; /* Remove shadow on active state for a 'pressed' effect */
+       transform: translate(2px, 2px); /* Slightly move card down and right on active */
+   }
+   
+   
+   .card-header,
+   .card-footer {
+       background-color: #fff; /* White header/footer background */
+       border-bottom: 2px solid var(--bs-border-color); /* Border for header */
+       border-top: none;
+       padding: 0.75rem 1.25rem;
+   }
+   .card-footer{
+       border-top: 2px solid var(--bs-border-color); /* Border for footer */
+       border-bottom: none;
+   }
+   
+   .card-body {
+       padding: 1.25rem;
+   }
+   
+   /* Forms */
+   .form-control {
+       border-radius: 0; /* Square form fields */
+       border: 2px solid var(--bs-border-color); /* Thick form field border */
+       box-shadow: none; /* Remove form field shadows */
+       padding: 0.75rem;
+   }
+   
+   .form-control:focus {
+       border-color: var(--bs-primary); /* Focus border color */
+       box-shadow: none; /* Remove focus shadow */
+       outline: 0; /* Remove default focus outline */
+       background-color: #f0f0f0; /* Slightly darker background on focus */
+   }
+   
+   .form-label {
+       font-weight: bold;
+       margin-bottom: 0.5rem;
+   }
+   
+   .form-check-input {
+       border-radius: 0; /* Square checkboxes/radios */
+       border: 2px solid var(--bs-border-color);
+       box-shadow: none;
+   }
+   
+   .form-check-input:focus {
+       border-color: var(--bs-primary);
+       box-shadow: none;
+       outline: 0;
+   }
+   
+   .form-select {
+       border-radius: 0;
+       border: 2px solid var(--bs-border-color);
+       box-shadow: none;
+       padding: 0.75rem;
+   }
+   
+   .form-select:focus {
+       border-color: var(--bs-primary);
+       box-shadow: none;
+       outline: 0;
+       background-color: #f0f0f0;
+   }
+   
+   .input-group-text {
+       border-radius: 0;
+       border: 2px solid var(--bs-border-color);
+       background-color: #fff; /* White input group addon background */
+   }
+   
+   /* List Groups */
+   .list-group {
+       border-radius: 0; /* Square list group */
+       border: 2px solid var(--bs-border-color); /* Border around the list */
+   }
+   
+   .list-group-item {
+       border-width: 0 0 2px; /* Border only at the bottom */
+       border-color: var(--bs-border-color);
+       padding: 0.75rem 1.25rem;
+       background-color: #fff;
+   }
+   
+   .list-group-item:first-child {
+       border-top-left-radius: 0;
+       border-top-right-radius: 0;
+       border-top: 2px solid var(--bs-border-color); /* Top border for first item */
+   }
+   
+   .list-group-item:last-child {
+       border-bottom-right-radius: 0;
+       border-bottom-left-radius: 0;
+       border-bottom: 2px solid var(--bs-border-color); /* Bottom border for last item */
+   }
+   
+   .list-group-item.active {
+       background-color: var(--bs-primary);
+       color: #fff;
+       border-color: var(--bs-primary);
+   }
+   
+   /* Tables */
+   .table {
+       border-collapse: collapse; /* Single border for table cells */
+   }
+   
+   .table thead th {
+       border-bottom: 2px solid var(--bs-border-color); /* Thicker header border */
+       border-top: none;
+       padding: 0.75rem;
+       font-weight: bold;
+       text-transform: uppercase;
+       background-color: #e8e8e8; /* Slightly darker header background */
+   }
+   
+   .table tbody,
+   .table thead,
+   .table th,
+   .table td {
+       border: 2px solid var(--bs-border-color); /* Border for all cells */
+   }
+   
+   .table td {
+       padding: 0.75rem;
+   }
+   
+   .table-striped tbody tr:nth-of-type(odd) {
+       background-color: rgba(0, 0, 0, 0.05); /* Very subtle striped background */
+   }
+   
+   /* Alerts */
+   .alert {
+       border-radius: 0; /* Square alerts */
+       border: 2px solid var(--bs-border-color); /* Thick alert border */
+       padding: 1rem 1.5rem;
+       margin-bottom: 1rem;
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+   }
+   
+   .alert-primary {
+       background-color: #e0e0e0; /* Light gray for primary alert */
+       color: var(--bs-primary);
+       border-color: var(--bs-primary);
+   }
+   
+   .alert-secondary {
+       background-color: #e0e0e0;
+       color: var(--bs-secondary);
+       border-color: var(--bs-secondary);
+   }
+   
+   .alert-success {
+       background-color: #e0e0e0;
+       color: var(--bs-success);
+       border-color: var(--bs-success);
+   }
+   
+   .alert-info {
+       background-color: #e0e0e0;
+       color: var(--bs-info);
+       border-color: var(--bs-info);
+   }
+   
+   .alert-warning {
+       background-color: #e0e0e0;
+       color: var(--bs-warning);
+       border-color: var(--bs-warning);
+   }
+   
+   .alert-danger {
+       background-color: #e0e0e0;
+       color: var(--bs-danger);
+       border-color: var(--bs-danger);
+   }
+   
+   .alert-light {
+       background-color: #e0e0e0;
+       color: var(--bs-light);
+       border-color: var(--bs-light);
+   }
+   
+   .alert-dark {
+       background-color: #e0e0e0;
+       color: var(--bs-dark);
+       border-color: var(--bs-dark);
+   }
+   
+   /* Progress bars */
+   .progress {
+       border-radius: 0; /* Square progress bars */
+       background-color: #e0e0e0; /* Light gray progress background */
+       overflow: hidden; /* Fix rounded corners if they appear */
+   }
+   
+   .progress-bar {
+       border-radius: 0; /* Square progress bar inner */
+       background-color: var(--bs-primary); /* Primary color progress bar */
+   }
+   
+   /* Badges and Pills - Minimal Styling */
+   .badge,
+   .badge-pill {
+       border-radius: 0; /* Square badges/pills */
+       padding: 0.5em 0.75em;
+       font-weight: bold;
+       text-transform: uppercase;
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+   }
+   
+   .badge-primary {
+       background-color: var(--bs-primary);
+       color: #fff;
+   }
+   
+   .badge-secondary {
+       background-color: var(--bs-secondary);
+       color: #fff;
+   }
+   
+   /* Modals */
+   .modal-content {
+       border-radius: 0; /* Square modal */
+       border: 2px solid var(--bs-border-color); /* Thick modal border */
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+   }
+   
+   .modal-header,
+   .modal-footer {
+       background-color: #fff; /* White modal header/footer */
+       border-bottom: 2px solid var(--bs-border-color); /* Border for header */
+       border-top: none;
+       padding: 1rem;
+   }
+   .modal-footer{
+       border-top: 2px solid var(--bs-border-color); /* Border for footer */
+       border-bottom: none;
+   }
+   
+   .modal-title {
+       font-weight: bold;
+   }
+   
+   .modal-body {
+       padding: 1rem;
+   }
+   
+   .modal-backdrop.show {
+       background-color: rgba(0, 0, 0, 0.7); /* Darker modal backdrop */
+   }
+   
+   
+   /* Tooltips and Popovers - Minimal Styling */
+   .tooltip-inner,
+   .popover-body,
+   .popover-header {
+       border-radius: 0; /* Square tooltips/popovers */
+       background-color: #fff; /* White tooltip/popover background */
+       color: var(--bs-body-color);
+       border: 2px solid var(--bs-border-color);
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow */
+   }
+   
+   .bs-tooltip-top .tooltip-arrow::before,
+   .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
+   .bs-tooltip-bottom .tooltip-arrow::before,
+   .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
+   .bs-tooltip-start .tooltip-arrow::before,
+   .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+   .bs-tooltip-end .tooltip-arrow::before,
+   .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+   .bs-popover-top > .popover-arrow::after,
+   .bs-popover-auto[data-popper-placement^="top"] > .popover-arrow::after,
+   .bs-popover-bottom > .popover-arrow::after,
+   .bs-popover-auto[data-popper-placement^="bottom"] > .popover-arrow::after,
+   .bs-popover-start > .popover-arrow::after,
+   .bs-popover-auto[data-popper-placement^="left"] > .popover-arrow::after,
+   .bs-popover-end > .popover-arrow::after,
+   .bs-popover-auto[data-popper-placement^="right"] > .popover-arrow::after {
+       border-color: var(--bs-border-color); /* Arrow border color */
+   }
+   .tooltip-inner, .popover-header {
+       font-weight: bold;
+   }
+   .popover-header {
+       border-bottom: 2px solid var(--bs-border-color);
+   }
+   
+   
+   /* ==========================================================================
+      Utilities - Overrides if necessary (generally Bootstrap utilities are good)
+      ========================================================================== */
+   
+   /* Example: If you wanted to override Bootstrap's rounded corners utility */
+   .rounded {
+       border-radius: 0 !important; /* Force no rounded corners */
+   }
+   .rounded-top {
+       border-top-left-radius: 0 !important;
+       border-top-right-radius: 0 !important;
+   }
+   .rounded-bottom {
+       border-bottom-left-radius: 0 !important;
+       border-bottom-right-radius: 0 !important;
+   }
+   .rounded-start {
+       border-top-left-radius: 0 !important;
+       border-bottom-left-radius: 0 !important;
+   }
+   .rounded-end {
+       border-top-right-radius: 0 !important;
+       border-bottom-right-radius: 0 !important;
+   }
+   .rounded-circle {
+       border-radius: 0 !important; /* Circles become squares */
+   }
+   .rounded-pill {
+       border-radius: 0 !important; /* Pills become rectangles */
+   }
+   
+   
+   /* ==========================================================================
+      Custom Components or Specific Overrides (Add here if needed)
+      ========================================================================== */
+   
+   /* Example: Custom Neo-Brutalist styled section */
+   .neo-brutalist-section {
+       border: 4px solid var(--bs-border-color);
+       padding: 2rem;
+       background-color: #fff;
+       margin-bottom: 2rem;
+       box-shadow: var(--neo-brutalist-shadow); /* Apply Neo-Brutalist shadow to custom section */
+   }
+   
+   .neo-brutalist-section h2 {
+       font-size: 2.5rem;
+       margin-bottom: 1rem;
+       text-transform: uppercase;
+   }
+   
+   
+   /* ==========================================================================
+      Important: Load this CSS AFTER Bootstrap CSS in your HTML
+      ========================================================================== */

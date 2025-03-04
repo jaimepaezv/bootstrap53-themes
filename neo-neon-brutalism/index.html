@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo-Neon Brutalism Demo</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (Neo-Brutalism Neon Override) -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Assuming your CSS file is named "style.css" in the same directory -->
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        /* Add some padding to the top for better visual spacing */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NEO-NEON DEMO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <section class="mb-5">
+            <!-- Headings -->
+            <h1 class="mb-3">H1 Heading - Vibrant Yellow</h1>
+            <h2>H2 Heading</h2>
+            <h3>H3 Heading</h3>
+            <h4>H4 Heading</h4>
+            <h5>H5 Heading</h5>
+            <h6>H6 Heading</h6>
+            <p class="lead">This is a lead paragraph. It stands out a bit.</p>
+            <p>Normal paragraph text in off-white color. Demonstrating the base typography.</p>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Buttons -->
+            <h2>Buttons</h2>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+            </div>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Cards -->
+            <h2>Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Card Header
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Action</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Card Footer
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title (No Header)</h5>
+                            <p class="card-text">Another example card, this one without a header, showcasing just the body and footer.</p>
+                            <a href="#" class="btn btn-secondary">Another Action</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Footer Example
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Centered Card</h5>
+                            <p class="card-text">This card content is centered for a different layout style within the brutalist theme.</p>
+                            <a href="#" class="btn btn-success">Centered Action</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Forms -->
+            <h2>Forms</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Select Option</label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="mb-3">
+                    <label for="customRange1" class="form-label">Range</label>
+                    <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Alerts -->
+            <h2>Alerts</h2>
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                A simple secondary alert—check it out!
+            </div>
+            <div class="alert alert-success" role="alert">
+                A simple success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+                A simple warning alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+                A simple info alert—check it out!
+            </div>
+            <div class="alert alert-light" role="alert">
+                A simple light alert—check it out!
+            </div>
+            <div class="alert alert-dark" role="alert">
+                A simple dark alert—check it out!
+            </div>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- List Groups -->
+            <h2>List Groups</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">Active item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Pagination -->
+            <h2>Pagination</h2>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Badges -->
+            <h2>Badges</h2>
+            <div>
+                <span class="badge bg-primary">Primary</span>
+                <span class="badge bg-secondary">Secondary</span>
+                <span class="badge bg-success">Success</span>
+                <span class="badge bg-danger">Danger</span>
+                <span class="badge bg-warning">Warning</span>
+                <span class="badge bg-info">Info</span>
+                <span class="badge bg-light text-dark">Light</span>
+                <span class="badge bg-dark">Dark</span>
+            </div>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Progress Bar -->
+            <h2>Progress Bar</h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+            <hr>
+        </section>
+
+        <section class="mb-5">
+            <!-- Links -->
+            <h2>Links</h2>
+            <p>This is a paragraph with a <a href="#">link example</a>.</p>
+            <p><a href="#" class="text-neon-yellow">Neon Yellow Link</a></p>
+            <p><a href="#" class="text-bright-green">Bright Green Link</a></p>
+            <hr>
+        </section>
+
+        <section>
+            <!-- Utility Classes Examples -->
+            <h2>Utility Classes</h2>
+            <p class="text-neon-yellow">This text uses the <code>.text-neon-yellow</code> utility class.</p>
+            <p class="bg-prussian-blue p-2">This paragraph has a Prussian Blue background using <code>.bg-prussian-blue</code> and padding <code>.p-2</code>.</p>
+        </section>
+
+    </div>
+
+    <footer class="text-center py-3">
+        <p>© 2024 Neo-Neon Brutalism Demo</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
