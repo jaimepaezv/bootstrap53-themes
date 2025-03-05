@@ -1,0 +1,1194 @@
+/* ==========================================================
+   New York Times Classic Newspaper Style - Bootstrap 5.3 Override
+   ========================================================== */
+
+/* ==========================================================
+   1. Google Fonts Import
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Georgia:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Font Choices (Based on Style Guide & Google Fonts) */
+/* Headings: EB Garamond (Elegant Serif) - could also use Old Standard TT */
+/* Body Text: Georgia (Classic Serif for Readability) */
+/* Monospace: Source Code Pro (Modern Monospace) */
+
+/* ==========================================================
+      2. Color Palette (CSS Variables)
+      ========================================================== */
+
+:root {
+    --nyt-background: #F9F9F9;
+    --nyt-primary-text: #111;
+    --nyt-secondary-text: #444;
+    --nyt-accent: #003366;
+    --nyt-accent-dark: #002244;
+    --nyt-border: #CCCCCC;
+    --nyt-muted: #777;
+    --nyt-error: #B22222;
+}
+
+/* ==========================================================
+      3. Basic Resets and Body Styles
+      ========================================================== */
+
+body {
+    font-family: 'Georgia', serif;
+    /* Body Text Font */
+    color: var(--nyt-primary-text);
+    background-color: var(--nyt-background);
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    /* Slightly condensed */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'EB Garamond', serif;
+    /* Heading Font */
+    color: var(--nyt-primary-text);
+    font-weight: 700;
+    /* Bold headings */
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+h1,
+.h1 {
+    font-size: 2.5rem;
+    /* 40px */
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+    /* 32px */
+}
+
+h3,
+.h3 {
+    font-size: 1.75rem;
+    /* 28px */
+}
+
+h4,
+.h4 {
+    font-size: 1.5rem;
+    /* 24px */
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+    /* 20px */
+}
+
+h6,
+.h6 {
+    font-size: 1rem;
+    /* 16px */
+    font-weight: bold;
+    /* Default h6 bold */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--nyt-accent);
+    text-decoration: none;
+    /* Remove default underlines */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.paper-background {
+    background-color: rgb(255, 253, 240); /* HEX: #FFFD F0 */
+    /* Tono de papel antiguo */
+    color: rgb(50, 50, 50);
+    /* Color de tinta impresa */
+}
+
+
+/* ==========================================================
+      4. Bootstrap Container and Grid
+      ========================================================== */
+
+.container,
+.container-fluid {
+    max-width: 1140px;
+    /* Newspaper column feel */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    margin-left: -8px;
+    /* Adjust gutters */
+    margin-right: -8px;
+}
+
+[class*="col-"] {
+    padding-left: 8px;
+    /* Adjust gutters */
+    padding-right: 8px;
+}
+
+/* ==========================================================
+      5. Bootstrap Typography Overrides
+      ========================================================== */
+
+.display-1 {
+    font-family: 'Old Standard TT', serif;
+    /* Masthead style */
+    font-size: 4rem;
+    /* Adjust as needed for very large masthead */
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    /* Tighter letter spacing for masthead */
+    text-transform: uppercase;
+    /* Uppercase masthead */
+}
+
+.display-2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.display-3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.display-4 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: normal;
+}
+
+small,
+.small {
+    font-size: 0.875rem;
+    /* 14px */
+    color: var(--nyt-muted);
+}
+
+mark,
+.mark {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Subtle highlight */
+    color: inherit;
+    padding: 0.1em 0.2em;
+}
+
+blockquote {
+    border-left: 0.25rem solid var(--nyt-muted);
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--nyt-muted);
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    border-top: 1px solid var(--nyt-border);
+}
+
+code,
+pre {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9rem;
+    background-color: #f0f0f0;
+    /* Light gray code background */
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+kbd {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--nyt-secondary-text);
+    color: var(--nyt-background);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+/* ==========================================================
+      6. Bootstrap Navbar Overrides
+      ========================================================== */
+
+.navbar {
+    background-color: transparent;
+    /* Or var(--nyt-background) */
+    border-bottom: 1px solid var(--nyt-border);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--nyt-primary-text);
+}
+
+.navbar-brand:hover {
+    color: var(--nyt-primary-text);
+}
+
+.navbar-nav .nav-link {
+    color: var(--nyt-primary-text);
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--nyt-accent);
+    text-decoration: underline;
+    /* Subtle underline on hover for nav links */
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--nyt-accent);
+    font-weight: bold;
+    /* Make active nav link bold */
+}
+
+.navbar-toggler {
+    border-color: var(--nyt-border);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(17, 17, 17, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Dark gray navbar toggler icon */
+}
+
+/* ==========================================================
+      7. Bootstrap Button Overrides
+      ========================================================== */
+
+.btn {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    border-radius: 0;
+    /* Square buttons */
+    padding: 0.5rem 1rem;
+    border-width: 1px;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--nyt-accent);
+    border-color: var(--nyt-accent);
+    color: var(--nyt-background);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+    background-color: var(--nyt-accent-dark);
+    border-color: var(--nyt-accent-dark);
+    color: var(--nyt-background);
+}
+
+.btn-outline-primary {
+    color: var(--nyt-accent);
+    border-color: var(--nyt-accent);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show>.btn-outline-primary.dropdown-toggle {
+    background-color: var(--nyt-accent);
+    border-color: var(--nyt-accent);
+    color: var(--nyt-background);
+}
+
+.btn-secondary {
+    background-color: var(--nyt-secondary-text);
+    border-color: var(--nyt-secondary-text);
+    color: var(--nyt-background);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.show>.btn-secondary.dropdown-toggle {
+    background-color: #333;
+    /* Darker secondary color */
+    border-color: #333;
+    color: var(--nyt-background);
+}
+
+.btn-outline-secondary {
+    color: var(--nyt-secondary-text);
+    border-color: var(--nyt-secondary-text);
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.show>.btn-outline-secondary.dropdown-toggle {
+    background-color: var(--nyt-secondary-text);
+    border-color: var(--nyt-secondary-text);
+    color: var(--nyt-background);
+}
+
+.btn-dark {
+    background-color: var(--nyt-primary-text);
+    border-color: var(--nyt-primary-text);
+    color: var(--nyt-background);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark.active,
+.show>.btn-dark.dropdown-toggle {
+    background-color: #000;
+    border-color: #000;
+    color: var(--nyt-background);
+}
+
+.btn-outline-dark {
+    color: var(--nyt-primary-text);
+    border-color: var(--nyt-primary-text);
+    background-color: transparent;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active,
+.show>.btn-outline-dark.dropdown-toggle {
+    background-color: var(--nyt-primary-text);
+    border-color: var(--nyt-primary-text);
+    color: var(--nyt-background);
+}
+
+.btn-light,
+.btn-outline-light {
+    /* Light buttons not really in NYT style, style them subtly if needed */
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+    color: var(--nyt-primary-text);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.show>.btn-light.dropdown-toggle,
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-light.active,
+.show>.btn-outline-light.dropdown-toggle {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    color: var(--nyt-primary-text);
+}
+
+.btn-outline-light {
+    background-color: transparent;
+}
+
+
+.btn-link {
+    color: var(--nyt-accent);
+    text-decoration: none;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: darken(var(--nyt-accent), 10%);
+    text-decoration: underline;
+}
+
+/* ==========================================================
+      8. Bootstrap Form Overrides
+      ========================================================== */
+
+.form-control {
+    font-family: 'Georgia', serif;
+    background-color: var(--nyt-background);
+    color: var(--nyt-primary-text);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--nyt-accent);
+    box-shadow: none;
+    /* Remove focus shadow */
+}
+
+.form-control::placeholder {
+    color: var(--nyt-muted);
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    color: var(--nyt-secondary-text);
+}
+
+.form-text {
+    color: var(--nyt-muted);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-check-input {
+    border-color: var(--nyt-border);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-check-input:focus {
+    border-color: var(--nyt-accent);
+    box-shadow: none;
+}
+
+.form-select {
+    font-family: 'Georgia', serif;
+    background-color: var(--nyt-background);
+    color: var(--nyt-primary-text);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: var(--nyt-accent);
+    box-shadow: none;
+}
+
+/* ==========================================================
+      9. Bootstrap Card Overrides
+      ========================================================== */
+
+.card {
+    background-color: var(--nyt-background);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    box-shadow: none;
+    /* Remove card shadow */
+    margin-bottom: 1.5rem;
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--nyt-background);
+    border-color: var(--nyt-border);
+    padding: 0.75rem 1.25rem;
+}
+
+.card-header {
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    border-bottom-width: 1px;
+}
+
+.card-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    color: var(--nyt-secondary-text);
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    line-height: 1.6;
+}
+
+.card-link {
+    color: var(--nyt-accent);
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+    border-radius: 0;
+    /* Square images in cards */
+}
+
+/* ==========================================================
+      10. Bootstrap Table Overrides
+      ========================================================== */
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--nyt-primary-text);
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--nyt-border);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--nyt-border);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--nyt-primary-text);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.03);
+    /* Subtle striped effect */
+}
+
+.table-bordered {
+    border: 1px solid var(--nyt-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--nyt-border);
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody+tbody {
+    border: 0;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Subtle hover on table rows */
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ==========================================================
+      11. Bootstrap Alert Overrides
+      ========================================================== */
+
+.alert {
+    border-radius: 0;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+}
+
+.alert-primary {
+    color: var(--nyt-accent);
+    background-color: rgba(0, 51, 102, 0.1);
+    /* Light blue background */
+    border-color: rgba(0, 51, 102, 0.2);
+}
+
+.alert-secondary {
+    color: var(--nyt-secondary-text);
+    background-color: rgba(68, 68, 68, 0.1);
+    /* Light gray background */
+    border-color: rgba(68, 68, 68, 0.2);
+}
+
+.alert-success {
+    color: #155724;
+    /* Bootstrap default success color, adjust if needed */
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: var(--nyt-error);
+    background-color: rgba(178, 34, 34, 0.1);
+    /* Light red background */
+    border-color: rgba(178, 34, 34, 0.2);
+}
+
+.alert-warning {
+    color: #856404;
+    /* Bootstrap default warning color, adjust if needed */
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-info {
+    color: #0c5460;
+    /* Bootstrap default info color, adjust if needed */
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-light {
+    color: #818182;
+    /* Bootstrap default light color, adjust if needed */
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+}
+
+.alert-dark {
+    color: var(--nyt-background);
+    background-color: rgba(17, 17, 17, 0.8);
+    /* Dark gray background for dark alerts */
+    border-color: rgba(17, 17, 17, 0.9);
+}
+
+.alert-link {
+    font-weight: bold;
+}
+
+/* ==========================================================
+      12. Bootstrap Pagination Overrides
+      ========================================================== */
+
+.pagination {
+    margin-bottom: 1rem;
+}
+
+.page-link {
+    color: var(--nyt-primary-text);
+    background-color: var(--nyt-background);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.page-link:hover {
+    background-color: #e0e0e0;
+    /* Light gray hover */
+    border-color: var(--nyt-border);
+}
+
+.page-link:focus {
+    box-shadow: none;
+    /* Remove focus shadow */
+}
+
+.page-item.active .page-link {
+    background-color: var(--nyt-accent);
+    border-color: var(--nyt-accent);
+    color: var(--nyt-background);
+}
+
+.page-item.disabled .page-link {
+    color: var(--nyt-muted);
+    background-color: var(--nyt-background);
+    border-color: var(--nyt-border);
+}
+
+/* ==========================================================
+      13. Bootstrap Modal Overrides
+      ========================================================== */
+
+.modal-content {
+    border-radius: 0;
+    border: 1px solid var(--nyt-border);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    /* Subtle modal shadow */
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--nyt-border);
+    padding: 1rem 1.5rem;
+}
+
+.modal-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--nyt-border);
+    padding: 1rem 1.5rem;
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent backdrop */
+}
+
+.modal-header .btn-close {
+    background-color: transparent;
+    border: 0;
+    opacity: 0.5;
+    padding: 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+    /* Adjust close button position */
+}
+
+.modal-header .btn-close:hover {
+    opacity: 0.75;
+}
+
+/* Override Bootstrap close icon to be dark gray */
+.btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    opacity: 0.5;
+}
+
+.btn-close:hover {
+    opacity: 0.75;
+}
+
+
+/* ==========================================================
+      14. List Group Overrides
+      ========================================================== */
+
+.list-group {
+    border-radius: 0;
+}
+
+.list-group-item {
+    background-color: var(--nyt-background);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    padding: 0.75rem 1.25rem;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.list-group-item.active {
+    background-color: var(--nyt-accent);
+    border-color: var(--nyt-accent);
+    color: var(--nyt-background);
+}
+
+.list-group-item:hover,
+.list-group-item:focus {
+    background-color: #f0f0f0;
+    /* Light gray hover for list items */
+}
+
+/* ==========================================================
+      15. Breadcrumb Overrides
+      ========================================================== */
+
+.breadcrumb {
+    background-color: var(--nyt-background);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--nyt-secondary-text);
+}
+
+.breadcrumb-item a {
+    color: var(--nyt-accent);
+}
+
+.breadcrumb-item.active {
+    color: var(--nyt-secondary-text);
+}
+
+/* ==========================================================
+      16. Progress Bar Overrides
+      ========================================================== */
+
+.progress {
+    border-radius: 0;
+    background-color: #e0e0e0;
+    /* Light gray progress background */
+}
+
+.progress-bar {
+    background-color: var(--nyt-accent);
+}
+
+/* ==========================================================
+      17. Tooltip and Popover Overrides (Basic)
+      ========================================================== */
+
+.tooltip-inner {
+    font-family: 'Georgia', serif;
+    background-color: var(--nyt-primary-text);
+    color: var(--nyt-background);
+    border-radius: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+    border-top-color: var(--nyt-primary-text);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-right-color: var(--nyt-primary-text);
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+    border-bottom-color: var(--nyt-primary-text);
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+    border-left-color: var(--nyt-primary-text);
+}
+
+.popover {
+    border-radius: 0;
+    border: 1px solid var(--nyt-border);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.popover-header {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    background-color: var(--nyt-background);
+    border-bottom: 1px solid var(--nyt-border);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0.75rem 1.25rem;
+}
+
+.popover-body {
+    padding: 0.75rem 1.25rem;
+    color: var(--nyt-primary-text);
+    background-color: var(--nyt-background);
+}
+
+.bs-popover-top>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::after {
+    border-top-color: var(--nyt-background);
+}
+
+.bs-popover-top>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::before {
+    border-top-color: var(--nyt-border);
+}
+
+.bs-popover-end>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::after {
+    border-right-color: var(--nyt-background);
+}
+
+.bs-popover-end>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::before {
+    border-right-color: var(--nyt-border);
+}
+
+.bs-popover-bottom>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after {
+    border-bottom-color: var(--nyt-background);
+}
+
+.bs-popover-bottom>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::before {
+    border-bottom-color: var(--nyt-border);
+}
+
+.bs-popover-start>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after {
+    border-left-color: var(--nyt-background);
+}
+
+.bs-popover-start>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::before {
+    border-left-color: var(--nyt-border);
+}
+
+/* ==========================================================
+      18. Accordion Overrides
+      ========================================================== */
+
+.accordion-button {
+    background-color: var(--nyt-background);
+    color: var(--nyt-primary-text);
+    border: 1px solid var(--nyt-border);
+    border-radius: 0;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    padding: 1rem 1.25rem;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--nyt-background);
+    /* Keep background consistent when expanded */
+    color: var(--nyt-primary-text);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+    /* Subtle inner shadow when expanded */
+}
+
+.accordion-button:focus {
+    border-color: var(--nyt-accent);
+    box-shadow: none;
+    /* Remove focus shadow */
+}
+
+.accordion-body {
+    padding: 1.25rem 1.25rem;
+    border: 1px solid var(--nyt-border);
+    border-top: 0;
+    /* Remove top border of body to visually connect with header */
+    background-color: var(--nyt-background);
+}
+
+.accordion-item {
+    border: 0;
+    /* Remove default accordion item border */
+    margin-bottom: 0.5rem;
+    /* Add some spacing between items */
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.accordion-item:last-of-type .accordion-collapse {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* ==========================================================
+      19. Image and Media Styling
+      ========================================================== */
+
+.img-fluid {
+    border-radius: 0;
+    /* Sharp rectangular images */
+    max-width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    font-size: 0.875rem;
+    /* 14px */
+    color: var(--nyt-muted);
+    font-style: italic;
+    /* Italic captions */
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================
+      20. Footer Styling
+      ========================================================== */
+
+.nyt-footer {
+    background-color: var(--nyt-background);
+    border-top: 1px solid var(--nyt-border);
+    padding: 2rem 0;
+    color: var(--nyt-secondary-text);
+    font-size: 0.9rem;
+}
+
+.nyt-footer a {
+    color: var(--nyt-primary-text);
+    text-decoration: underline;
+    /* Underlined links in footer */
+}
+
+.nyt-footer a:hover {
+    color: var(--nyt-accent);
+}
+
+.nyt-footer-section {
+    margin-bottom: 1.5rem;
+}
+
+.nyt-footer-section h4 {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--nyt-primary-text);
+}
+
+.nyt-footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nyt-footer-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================
+      21. Extras - Micro-interactions
+      ========================================================== */
+
+/* Accessibility Focus Styles */
+a:focus,
+.btn:focus,
+.form-control:focus,
+.page-link:focus,
+.navbar-toggler:focus,
+.form-check-input:focus,
+.form-select:focus,
+.accordion-button:focus {
+    outline: 2px solid var(--nyt-accent);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.2);
+}
+
+a:hover {
+    transition: color 0.15s ease-in-out;
+    /* Smooth color transition on hover */
+}
+
+/* ==========================================================
+      22. Optional Dark Mode (Basic - Sepia Tones)
+      ========================================================== */
+
+/* .dark-mode {
+     --nyt-background: #222;
+     --nyt-primary-text: #EEE;
+     --nyt-secondary-text: #CCC;
+     --nyt-accent: #D97706;  Sepia Gold for accent in dark mode
+     --nyt-border: #555;
+     --nyt-muted: #999;
+   }
+   
+   .dark-mode body {
+     background-color: var(--nyt-background);
+     color: var(--nyt-primary-text);
+   }
+   
+   .dark-mode .card,
+   .dark-mode .modal-content,
+   .dark-mode .list-group-item,
+   .dark-mode .form-control,
+   .dark-mode .form-select,
+   .dark-mode .breadcrumb,
+   .dark-mode .page-link,
+   .dark-mode .alert,
+   .dark-mode .accordion-button,
+   .dark-mode .accordion-body,
+   .dark-mode .table,
+   .dark-mode .table-striped tbody tr:nth-of-type(odd),
+   .dark-mode .table-bordered,
+   .dark-mode .table-bordered th,
+   .dark-mode .table-bordered td {
+     background-color: var(--nyt-background);
+     border-color: var(--nyt-border);
+     color: var(--nyt-primary-text);
+   }
+   
+   .dark-mode .navbar {
+     border-bottom-color: var(--nyt-border);
+   }
+   
+   .dark-mode .navbar-brand,
+   .dark-mode .navbar-nav .nav-link,
+   .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
+   .dark-mode .card-header,
+   .dark-mode .modal-header,
+   .dark-mode .modal-footer,
+   .dark-mode .popover-header,
+   .dark-mode .nyt-footer-section h4,
+   .dark-mode .table thead th {
+     color: var(--nyt-primary-text);
+   }
+   
+   .dark-mode .form-control::placeholder {
+     color: var(--nyt-muted);
+   }
+   
+   .dark-mode .btn-outline-primary,
+   .dark-mode .btn-outline-secondary,
+   .dark-mode .btn-outline-dark {
+     color: var(--nyt-primary-text);
+     border-color: var(--nyt-primary-text);
+   }
+   
+   .dark-mode .btn-outline-primary:hover, .dark-mode .btn-outline-primary:focus, .dark-mode .btn-outline-primary:active, .dark-mode .btn-outline-primary.active, .dark-mode .show > .btn-outline-primary.dropdown-toggle,
+   .dark-mode .btn-outline-secondary:hover, .dark-mode .btn-outline-secondary:focus, .dark-mode .btn-outline-secondary:active, .dark-mode .btn-outline-secondary.active, .dark-mode .show > .btn-outline-secondary.dropdown-toggle,
+   .dark-mode .btn-outline-dark:hover, .dark-mode .btn-outline-dark:focus, .dark-mode .btn-outline-dark:active, .dark-mode .btn-outline-dark.active, .dark-mode .show > .btn-outline-dark.dropdown-toggle {
+     color: var(--nyt-background);
+   }
+   
+   .dark-mode .btn-close {
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EEE'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+   } */

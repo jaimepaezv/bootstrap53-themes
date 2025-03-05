@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Times Classic Newspaper - Bootstrap 5.3 Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS (Override version - link to your style.css) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css">
+</head>
+
+<body class="paper-background">
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">The New York Times</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">World</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">U.S.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Politics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Science</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Health</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Arts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Style</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Travel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container pt-4">
+        <main class="row">
+            <div class="col-md-8">
+                <section class="mb-5">
+                    <h1 class="display-1">Breaking News</h1>
+                    <p class="lead">A major developing story unfolding across the globe.</p>
+                    <hr>
+                    <h2>Typography Showcase</h2>
+                    <p>This section demonstrates the typography styles defined in our New York Times inspired theme. We aim for timeless elegance and readability.</p>
+
+                    <h1>Heading 1 <small class="text-muted">Subtle Text</small></h1>
+                    <h2>Heading 2 <mark>Highlighted Text</mark></h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+
+                    <p>This is standard body text using the 'Georgia' serif font. It's designed for optimal readability for extended reading, just like in a classic newspaper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                    <p class="lead">Lead paragraph text. Intended to stand out. This is a lead paragraph to introduce a section or highlight key information. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                    <small>This is small text, often used for captions, footnotes, or less important information.</small>
+
+                    <blockquote class="blockquote">
+                        <p>A well-known quote or excerpt, styled to stand out from the main body of text. The style is inspired by classic newspaper blockquotes.</p>
+                        <footer class="blockquote-footer">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </footer>
+                    </blockquote>
+
+                    <p>Inline <code>code</code> example within a paragraph. Useful for technical terms or code snippets.</p>
+
+                    <pre><code>
+// Code block example, preformatted text
+function helloWorld() {
+    console.log("Hello, World!");
+}
+helloWorld();
+                    </code></pre>
+
+                    <kbd>Keyboard input example: Ctrl + C</kbd>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Button Styles</h2>
+                    <p>Demonstrating various button styles. Notice the square corners and classic color palette.</p>
+
+                    <div>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-outline-primary">Primary Outline</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+                        <button type="button" class="btn btn-outline-dark">Dark Outline</button>
+                        <button type="button" class="btn btn-outline-light">Light Outline</button>
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-primary btn-sm">Small Primary</button>
+                        <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Form Elements</h2>
+                    <p>Showcasing form elements. Clean and functional, with subtle styling.</p>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlSelect1" class="form-label">Select Box</label>
+                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Default radio
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="range" class="form-range" id="customRange1">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                        </div>
+                    </form>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Table Styles</h2>
+                    <p>Demonstrating table styles. Classic column-based newspaper table.</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Product A</td>
+                                <td>$10.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Product B</td>
+                                <td>$20.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Product C</td>
+                                <td>$30.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Data Point 1</th>
+                                <th scope="col">Data Point 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Value X</td>
+                                <td>Value Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Value Z</td>
+                                <td>Value W</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Item 1</td>
+                                <td>View</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Item 2</td>
+                                <td>View</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Very Long Column Header 1</th>
+                                    <th scope="col">Very Long Column Header 2</th>
+                                    <th scope="col">Very Long Column Header 3</th>
+                                    <th scope="col">Very Long Column Header 4</th>
+                                    <th scope="col">Very Long Column Header 5</th>
+                                    <th scope="col">Very Long Column Header 6</th>
+                                    <th scope="col">Very Long Column Header 7</th>
+                                    <th scope="col">Very Long Column Header 8</th>
+                                    <th scope="col">Very Long Column Header 9</th>
+                                    <th scope="col">Very Long Column Header 10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Data 1</td>
+                                    <td>Data 2</td>
+                                    <td>Data 3</td>
+                                    <td>Data 4</td>
+                                    <td>Data 5</td>
+                                    <td>Data 6</td>
+                                    <td>Data 7</td>
+                                    <td>Data 8</td>
+                                    <td>Data 9</td>
+                                    <td>Data 10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Alert Styles</h2>
+                    <p>Displaying various alert styles for different notification types.</p>
+
+                    <div class="alert alert-primary" role="alert">
+                        A primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        A secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        A success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        A danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        A warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        An info alert—check it out!
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        A light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark" role="alert">
+                        A dark alert—check it out!
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Card Styles</h2>
+                    <p>Showcasing card styles. Versatile containers for content.</p>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://via.placeholder.com/200x100/ddd/ccc?text=Image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            2 days ago
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Modal Example</h2>
+                    <p>Click the button below to trigger a modal dialog.</p>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    This is the modal body text. You can place any content here, from simple text to complex forms.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Pagination</h2>
+                    <p>Example of pagination for navigating through pages of content.</p>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>List Groups</h2>
+                    <p>Styling for list groups.</p>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item active" aria-current="true">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+
+                    <div class="list-group mt-3">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Breadcrumb</h2>
+                    <p>Example of breadcrumb navigation.</p>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Section</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Current</li>
+                        </ol>
+                    </nav>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Progress Bar</h2>
+                    <p>Styled progress bars.</p>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <hr>
+                </section>
+
+                <section class="mb-5">
+                    <h2>Accordion</h2>
+                    <p>Styled accordion component for collapsible content.</p>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </section>
+
+            </div>
+            <div class="col-md-4">
+                <aside>
+                    <section class="mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Stories</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><a href="#">Story 1 Headline</a></li>
+                                    <li class="list-group-item"><a href="#">Story 2 Headline</a></li>
+                                    <li class="list-group-item"><a href="#">Story 3 Headline</a></li>
+                                    <li class="list-group-item"><a href="#">Story 4 Headline</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Advertisement
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="https://via.placeholder.com/300x250/eee/ddd?text=Ad+Space" class="img-fluid" alt="Advertisement">
+                                <p class="card-text mt-2"><small class="text-muted">Your Ad Here</small></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Opinion
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Op-Ed Column</h5>
+                                <p class="card-text">Insightful opinion piece from a leading columnist. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="card-link">Read More</a>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <footer class="nyt-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 nyt-footer-section">
+                    <h4>About Us</h4>
+                    <p>Your source for trusted news and analysis. Delivering journalistic integrity and in-depth reporting since [Year].</p>
+                </div>
+                <div class="col-md-4 nyt-footer-section">
+                    <h4>Sections</h4>
+                    <ul class="nyt-footer-list">
+                        <li><a href="#">World News</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Arts & Culture</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 nyt-footer-section">
+                    <h4>Connect</h4>
+                    <ul class="nyt-footer-list">
+                        <li><a href="#"><i class="bi bi-facebook me-1"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-twitter me-1"></i> Twitter</a></li>
+                        <li><a href="#"><i class="bi bi-instagram me-1"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-1"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">© 2023 The New York Times Demo. All Rights Reserved.</p>
+            <p class="text-center"><small><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /*
+          No additional JavaScript is strictly necessary for the core functionality of this HTML demo.
+          Bootstrap 5.3's JavaScript bundle (included via CDN in the HTML) already provides
+          the interactivity for components like:
+        
+          - Navbar collapse/expand
+          - Modal dialogs
+          - Accordions
+        
+          If you wish to add *custom* JavaScript for enhanced interactivity or features
+          beyond Bootstrap's default behavior, you can add your scripts below.
+        
+          For example, you could add JavaScript to:
+        
+          1. Implement a Dark Mode toggle (using the CSS provided but commented out in style.css).
+          2. Add custom form validation.
+          3. Enhance button interactions with custom actions.
+          4. Dynamically load content.
+          5. Implement custom animations or effects.
+        
+          However, for this demo showcasing the *style* of Bootstrap components,
+          no extra JavaScript is required for it to "work" visually and interactively
+          in its basic form, thanks to Bootstrap's built-in JavaScript.
+        
+          If you *do* want to add custom JavaScript, you can place your code below
+          or link to an external JavaScript file.
+        
+          Example of adding a simple alert when a button with class 'btn-primary' is clicked:
+        
+        */
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const primaryButtons = document.querySelectorAll('.btn-primary');
+
+            primaryButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    // Example: Prevent default form submission if button is in a form
+                    event.preventDefault();
+
+                    // Example: Display a simple alert (you can replace this with more complex actions)
+                    alert('Primary button clicked!');
+
+                    // You can add more sophisticated JavaScript functionality here,
+                    // such as AJAX calls, DOM manipulation, etc.
+                });
+            });
+
+
+            // Example: You could add JavaScript here to handle form submissions,
+            //          validate form data, etc.
+
+            const formElement = document.querySelector('form');
+            if (formElement) {
+                formElement.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent default form submission for demo purposes
+                    alert('Form submitted (in demo - no actual submission occurs)');
+                    // In a real application, you would handle form data submission here.
+                    // You might use fetch or XMLHttpRequest to send data to a server.
+                });
+            }
+
+
+            // Example: Add a simple hover effect in JavaScript (though CSS is generally better for visual effects)
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.style.color = '#0056b3'; // Slightly darker blue on hover (example - CSS handles this better)
+                });
+                link.addEventListener('mouseout', function () {
+                    this.style.color = ''; // Revert to original color (empty string removes inline style)
+                });
+            });
+
+
+            // Example:  Basic Modal control via JavaScript (though Bootstrap's data-bs-* attributes are preferred)
+            const modalButton = document.querySelector('[data-bs-toggle="modal"]');
+            const exampleModal = document.getElementById('exampleModal');
+
+            if (modalButton && exampleModal) {
+                modalButton.addEventListener('click', function () {
+                    const modal = new bootstrap.Modal(exampleModal); // Create a Bootstrap Modal instance
+                    modal.show(); // Programmatically show the modal
+                });
+            }
+
+
+            // Add more custom JavaScript functionality below as needed for your specific application.
+            // For this demo, the core visual and interactive elements are already handled by
+            // Bootstrap's CSS and JavaScript.
+
+        });
+    </script>
+</body>
+
+</html>
